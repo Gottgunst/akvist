@@ -1,0 +1,113 @@
+:root {
+
+  --color__accent_green: #177C1B;
+  --color__accent_orange: #EF7D00;
+
+  --color__bg_white: #fff;
+  --color__bg_grey: #EFEFEF;
+  --color__bg_dark: #434350;
+  --color__bg_popup: #84858E;
+
+  --color__text_main: #000;
+  --color__text_invert: #fff;
+  --color__text_p: #555;
+  --color__text_p-small: #737373;
+  --color__text_p-tiny:#999;
+
+/* ----------------------------------- */
+
+  --border-radius_main: 8px;
+  --border-radius_small: 4px;
+
+/* ----------------------------------- */
+
+  --text__font-family_main: 'Golos Text VF', sans-serif;
+  --text__font-family_second: 'Arimo', sans-serif;
+
+  --text__size_h1: 42px;
+  --text__line-height_h1: 44px;
+  
+  --text__size_h2: 32px;
+  --text__line-height_h2: 36px;
+
+  --text__size_quote: 24px;
+  --text__line-height_quote: 32px;
+
+  --text__size_h3: 22px;
+  --text__line-height_h3: 24px;
+
+  --text__size_h4: 16px;
+  --text__line-height_h4: 20px;
+
+  --text__size_p: 16px;
+  --text__line-height_p: 24px;
+
+  --text__size_p-small: 14px;
+  --text__line-height_p-small: 20px;
+
+  --text__size_p-tiny: 12px;
+  --text__line-height_p-tiny: 16px;
+
+
+  --text__weight_bold: 600;
+  --text__weight_medium: 500;
+  --text__weight_regular: 400;
+
+}
+
+@media (max-width:792px) {
+  :root {
+    --text__size_h1: 38px;
+    --text__line-height_h1: 40px;
+    
+    --text__size_h2: 28px;
+    --text__line-height_h2: 32px;
+  
+    --text__size_h3: 20px;
+    --text__line-height_h3: 24px;
+  }
+}
+
+@media (max-width:343px) {
+  :root {
+
+    --text__size_h1: 24px;
+    --text__line-height_h1: 28px;
+    
+    --text__size_h2: 20px;
+    --text__line-height_h2: 24px;
+  
+    --text__size_quote: 20px;
+    --text__line-height_quote: 28px;
+  
+    --text__size_h3: 16px;
+    --text__line-height_h3: 24px;
+   
+    --text__size_h4: 14px;
+    --text__line-height_h4: 20px;
+   
+    --text__size_p: 14px;
+    --text__line-height_p: 20px;
+  
+    --text__size_p-small: 13px;
+    --text__line-height_p-small: 16px;
+  
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--text__font-family_main);
+  color: var(--color__text_main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
