@@ -7,7 +7,7 @@ export const directions: IDirection [] = [
     description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
     buttonText: "Подробнее",
     category: "- 1 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: false,
@@ -15,19 +15,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./logos/armstrong.png",
+        image: "./images/logos/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]
@@ -38,7 +38,7 @@ export const directions: IDirection [] = [
     description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
     buttonText: "Подробнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: false,
@@ -46,7 +46,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
     ]
@@ -57,7 +57,7 @@ export const directions: IDirection [] = [
     description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
     buttonText: "Под робнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: true,
     deAccent: false,
@@ -65,7 +65,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]
@@ -76,7 +76,7 @@ export const directions: IDirection [] = [
     description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
     buttonText: "Подробнее",
     category: "- 1 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: false,
@@ -84,19 +84,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./logos/armstrong.png",
+        image: "./images/logos/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]
@@ -107,7 +107,7 @@ export const directions: IDirection [] = [
     description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
     buttonText: "Подробнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: true,
@@ -115,7 +115,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
     ]
@@ -126,7 +126,7 @@ export const directions: IDirection [] = [
     description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
     buttonText: "Под робнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: true,
     deAccent: true,
@@ -134,7 +134,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]
@@ -145,7 +145,7 @@ export const directions: IDirection [] = [
     description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
     buttonText: "Подробнее",
     category: "- 1 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: true,
@@ -153,19 +153,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./logos/armstrong.png",
+        image: "./images/logos/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]
@@ -176,7 +176,7 @@ export const directions: IDirection [] = [
     description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
     buttonText: "Подробнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: false,
     deAccent: false,
@@ -184,7 +184,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./logos/albes.png",
+        image: "./images/logos/albes.png",
         link: "#",
       },
     ]
@@ -195,7 +195,7 @@ export const directions: IDirection [] = [
     description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
     buttonText: "Под робнее",
     category: "- 12 -",
-    image: "./cover.png",
+    image: "./images/cover.png",
     pageLink: "#",
     accent: true,
     deAccent: false,
@@ -203,7 +203,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./logos/ingermax.png",
+        image: "./images/logos/ingermax.png",
         link: "#",
       },
     ]

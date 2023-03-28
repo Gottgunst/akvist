@@ -5,7 +5,7 @@ import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
 import './components/main/main.css'
-import {directions} from './data/directions'
+import { directions } from './data/directions'
 
 
 
