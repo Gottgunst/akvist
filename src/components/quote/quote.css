@@ -3,9 +3,9 @@
   padding: 0 0 0 50px;
   position: relative;
 
-  font-size: var(--text__size_quote);
-  line-height: var(--text__line-height_quote);
-  font-weight: var(--text__weight_medium);
+  font-size: var(--font-size_quote);
+  line-height: var(--line-height_quote);
+  font-weight: var(--font-weight_medium);
 }
 
 .quote::before {
