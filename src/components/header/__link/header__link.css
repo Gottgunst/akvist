@@ -1,0 +1,7 @@
+.header__link {
+  color: var(--color__text_invert);
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}

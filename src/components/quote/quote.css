@@ -1,8 +1,10 @@
 .quote {
   margin: 100px auto;
-  padding: 0 0 0 50px;
+  padding: 0 160px 0 50px;
   position: relative;
+  box-sizing: content-box;
 
+  font-family: var(--font-family_h);
   font-size: var(--font-size_quote);
   line-height: var(--line-height_quote);
   font-weight: var(--font-weight_medium);
@@ -17,4 +19,23 @@
   color: var(--color__accent_green);
   font-size: 81px;
   line-height: 0;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .quote {
+    padding: 0 0 0 50px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .quote {
+    padding: 0;
+  }
+
+  .quote::before {
+    left: -7px;
+    top: -10px;
+  }
 }

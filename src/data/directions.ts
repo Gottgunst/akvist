@@ -15,19 +15,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./images/logos/armstrong.png",
+        image: "./images/brands/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]
@@ -46,7 +46,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
     ]
@@ -65,7 +65,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]
@@ -84,19 +84,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./images/logos/armstrong.png",
+        image: "./images/brands/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]
@@ -115,7 +115,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
     ]
@@ -134,7 +134,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]
@@ -153,19 +153,19 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
       {
         id: 2,
         name: "Armstrong",
-        image: "./images/logos/armstrong.png",
+        image: "./images/brands/armstrong.png",
         link: "#",
       },
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]
@@ -184,7 +184,7 @@ export const directions: IDirection [] = [
       {
         id: 1,
         name: "Албес",
-        image: "./images/logos/albes.png",
+        image: "./images/brands/albes.png",
         link: "#",
       },
     ]
@@ -203,7 +203,7 @@ export const directions: IDirection [] = [
       {
         id: 3,
         name: "Ingermax",
-        image: "./images/logos/ingermax.png",
+        image: "./images/brands/ingermax.png",
         link: "#",
       },
     ]

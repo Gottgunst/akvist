@@ -1,0 +1,6 @@
+body {
+  min-width: 343px;
+  font-family: var(--font-family_p);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

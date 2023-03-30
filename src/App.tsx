@@ -8,27 +8,41 @@ import './components/main/main.css'
 import { directions } from './data/directions'
 
 
-
 function App() {
   return (
     <>
       <Header/>
+
       <main>
-        <section className='main'>
+        <section className='welcome'>
+
           <Quote /> 
-          {directions.map ((direction, index) => index<4&&!direction.deAccent ?<Direct direction={direction} key={direction.id}/>:"")}
+
+        </section>
+
+
+
+          {/* {directions.map ((direction, index) => index<4&&!direction.deAccent ?<Direct direction={direction} key={direction.id}/>:"")}
+
         </section>
         <section className='de-accent'>
           <div className='de-accent__wrapper'>
+        
             {directions.map ((direction) => direction.deAccent ? <Direct direction={direction} key={direction.id}/>:"")}
+
           </div>
         </section>
         <section className='main'>
+
           {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direct direction={direction} key={direction.id}/>:"")}
-        </section>
-        <Contacts></Contacts>
-      </main>
-      <Footer/>
+         */}
+
+
+        {/* <Contacts></Contacts> */}
+
+      </main> 
+      
+      {/* <Footer/> */}
     </>
   );
 }
