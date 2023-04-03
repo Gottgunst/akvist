@@ -26,8 +26,12 @@
 @import url('../components/quote/quote.css');
 
 
-/* переименовать и распарсить надо ↓ */
-@import url('../components/main/main.css'); 
+@import url('../components/section/section.css');
+@import url('../components/section/_background/section_background_grey.css');
+@import url('../components/section/__title/section__title.css');
 
 
+@import url('../components/directions/directions.css');
+@import url('../components/directions/_type/directions_type_two-columns.css');
 
+@import url('../components/direction/direction.css');

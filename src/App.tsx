@@ -1,10 +1,9 @@
 import { Header } from './components/header/Header'
 import { Quote } from './components/quote/Quote'
-import { Direct } from './components/direct/Direct'
+import { Direction } from './components/direction/Direction'
 import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
-import './components/main/main.css'
 import { directions } from './data/directions'
 
 
@@ -20,23 +19,26 @@ function App() {
 
         </section>
 
+        <section className='section'>
 
-
-          {/* {directions.map ((direction, index) => index<4&&!direction.deAccent ?<Direct direction={direction} key={direction.id}/>:"")}
+          {directions.map ((direction, index) => index<4&&!direction.deAccent ?<Direction direction={direction} key={direction.id}/>:"")}
 
         </section>
-        <section className='de-accent'>
-          <div className='de-accent__wrapper'>
-        
-            {directions.map ((direction) => direction.deAccent ? <Direct direction={direction} key={direction.id}/>:"")}
+
+        {/* <section className='section section_background_grey'>
+          <div className='directions_type_two-columns'>
+
+            {directions.map ((direction) => direction.deAccent ? <Direction direction={direction} key={direction.id}/>:"")}
 
           </div>
-        </section>
-        <section className='main'>
+        </section> */}
 
-          {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direct direction={direction} key={direction.id}/>:"")}
-         */}
 
+        {/* <section className='section'>
+
+          {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direction direction={direction} key={direction.id}/>:"")}
+        
+        </section> */}
 
         {/* <Contacts></Contacts> */}
 
