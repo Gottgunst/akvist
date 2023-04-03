@@ -27,11 +27,19 @@
 
 
 @import url('../components/section/section.css');
-@import url('../components/section/_background/section_background_grey.css');
 @import url('../components/section/__title/section__title.css');
 
-
-@import url('../components/directions/directions.css');
-@import url('../components/directions/_type/directions_type_two-columns.css');
+/* @import url('../components/section/_background/section_background_grey.css'); */
+/* @import url('../components/directions/_type/directions_type_two-columns.css'); */
 
 @import url('../components/direction/direction.css');
+/* Модификаторы ↑↑↑↑↑ распарсить и поселить отдельно */
+
+@import url('../components/direction/__images/direction__images.css');
+@import url('../components/direction/__img/direction__img.css');
+@import url('../components/direction/__logos/direction__logos.css');
+@import url('../components/direction/__logo/direction__logo.css');
+@import url('../components/direction/__texts/direction__texts.css');
+@import url('../components/direction/__header/direction__header.css');
+@import url('../components/direction/__description/direction__description.css');
+@import url('../components/direction/__button/direction__button.css');

@@ -15,13 +15,15 @@ function App() {
       <main>
         <section className='welcome'>
 
-          <Quote /> 
+          <Quote />
 
         </section>
 
         <section className='section'>
 
-          {directions.map ((direction, index) => index<4&&!direction.deAccent ?<Direction direction={direction} key={direction.id}/>:"")}
+          {directions.map ((direction, index) =>
+            index < 3 && !direction.deAccent ?
+            <Direction direction={direction} key={direction.id} /> : "")}
 
         </section>
 
@@ -36,14 +38,14 @@ function App() {
 
         {/* <section className='section'>
 
-          {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direction direction={direction} key={direction.id}/>:"")}
-        
+          {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direction direction={direction}/>:"")}
+
         </section> */}
 
         {/* <Contacts></Contacts> */}
 
-      </main> 
-      
+      </main>
+
       {/* <Footer/> */}
     </>
   );

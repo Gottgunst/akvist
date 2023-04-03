@@ -1,0 +1,8 @@
+.direction__img {
+  width: 492px;
+  height: 100%;
+  position: relative;
+  border-radius: var(--border-radius_main);
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,8 @@
+.direction__description {
+  margin-top: 12px;
+
+  font-size: var(--font-size_p);
+  line-height: var(--line-height_p);
+  font-weight: var(--font-weight_regular);
+  color: var(--color__text_p);
+}

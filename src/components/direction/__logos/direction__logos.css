@@ -1,0 +1,24 @@
+.direction__logos {
+  display: flex;
+  width: auto;
+  height: 56px;
+  list-style: none;
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+}
+
+/* .direction:nth-of-type(2n) .direction__logos {
+  justify-content: flex-end;
+  left: unset;
+  right: 0;
+} */
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .direction__logos {
+    display: none;
+  }
+}

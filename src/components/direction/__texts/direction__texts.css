@@ -1,0 +1,7 @@
+.direction__texts {
+  /* width: 380px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}

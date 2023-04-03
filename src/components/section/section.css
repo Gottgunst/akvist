@@ -3,3 +3,18 @@
   padding: 0 70px;
   margin: 0 auto;
 }
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .section {
+    max-width: 100%;
+    padding: 0 86px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .section {
+    padding: 0 21px;
+  }
+}
