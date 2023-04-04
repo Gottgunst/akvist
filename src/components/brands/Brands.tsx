@@ -2,21 +2,18 @@ import { IDirectionLogos } from '../../models';
 
 interface DirectionBrandProps {
   brand: IDirectionLogos
-  noImage: boolean
+  noImage?: boolean
 }
 
-export function Brands({brand}: DirectionBrandProps, {noImage}: DirectionBrandProps) {
-  console.log(noImage);
-  if (noImage == true) {
+export function Brands({brand, noImage}: DirectionBrandProps) {
   return (
+
     <li>
-      <img className='direction__logo' src={brand.image} alt={brand.name}/>
+      {noImage && brand.name}
+      {!noImage && <img className='direction__brand' src={brand.image} alt={brand.name}/>}
     </li>
-  );} else {return (
-    <li>
-      {brand.name}
-    </li>
-  );}
+
+  );
 }
 
 export default Brands;

@@ -15,21 +15,22 @@ export function Direction({direction}: DirectProps) {
 
       <div className='direction__images'>
         <img src={direction.image} alt={direction.title} className='direction__img'/>
-        <ul className='direction__logos'>
+        <ul className='direction__brands'>
           {direction.logos.map(logos =>
-            <Brands brand={logos} noImage={false} key={logos.id} />)}
+            <Brands brand={logos} key={logos.id} />)}
         </ul>
       </div>
 
       <div className='direction__texts'>
         <h3 className='direction__header'>{direction.title}</h3>
-        <ul className='direction__logos direction__logos_only-text'>
+        <ul className='direction__brands-name'>
           {direction.logos.map(logos =>
             <Brands brand={logos} noImage={true} key={logos.id}/>)}
         </ul>
         <p className='direction__description'>{direction.description}</p>
         <button className='direction__button'>{direction.buttonText}</button>
       </div>
+
     </article>
 
   );

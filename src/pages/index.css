@@ -37,8 +37,9 @@
 
 @import url('../components/direction/__images/direction__images.css');
 @import url('../components/direction/__img/direction__img.css');
-@import url('../components/direction/__logos/direction__logos.css');
-@import url('../components/direction/__logo/direction__logo.css');
+@import url('../components/direction/__brands/direction__brands.css');
+@import url('../components/direction/__brands-name/direction__brands-name.css');
+@import url('../components/direction/__brand/direction__brand.css');
 @import url('../components/direction/__texts/direction__texts.css');
 @import url('../components/direction/__header/direction__header.css');
 @import url('../components/direction/__description/direction__description.css');

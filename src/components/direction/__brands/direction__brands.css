@@ -1,8 +1,7 @@
-.direction__logos {
+.direction__brands {
   display: flex;
   width: auto;
   height: 56px;
-  list-style: none;
   position: absolute;
   bottom: -56px;
   left: 0;
@@ -18,7 +17,7 @@
 /* --------------MEDIA--------------- */
 
 @media screen and (max-width: 1079px) {
-  .direction__logos {
+  .direction__brands {
     display: none;
   }
 }
