@@ -10,7 +10,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 1,
@@ -41,7 +41,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 1,
@@ -60,7 +60,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: true,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 3,
@@ -79,7 +79,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 1,
@@ -110,7 +110,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: true,
+    combine: true,
     logos: [
       {
         id: 1,
@@ -129,7 +129,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: true,
-    deAccent: true,
+    combine: true,
     logos: [
       {
         id: 3,
@@ -148,7 +148,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: true,
+    combine: true,
     logos: [
       {
         id: 1,
@@ -179,7 +179,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: false,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 1,
@@ -198,7 +198,7 @@ export const directions: IDirection [] = [
     image: "./images/cover.png",
     pageLink: "#",
     accent: true,
-    deAccent: false,
+    combine: false,
     logos: [
       {
         id: 3,

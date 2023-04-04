@@ -7,20 +7,22 @@ export interface IDirection {
   image: string
   pageLink: string
   accent: boolean
-  deAccent: boolean
+  combine: boolean
   logos:{
       id: number
       name: string
       image: string
-      link: string
+      link?: string
+      description?: string
     }[]
 }
 
-export interface IDirectionLogos {
+export interface IDirectionBrands {
   id: number
   name: string
   image: string
-  link: string
+  link?: string
+  description?: string
 }
 
 export interface IContacts {

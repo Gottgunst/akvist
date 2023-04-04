@@ -1,6 +1,6 @@
 .section {
   max-width: 940px;
-  padding: 0 70px;
+  padding: 0 var(--padding__section);
   margin: 0 auto;
 }
 
@@ -9,12 +9,5 @@
 @media screen and (max-width: 1079px) {
   .section {
     max-width: 100%;
-    padding: 0 86px;
-  }
-}
-
-@media screen and (max-width: 791px) {
-  .section {
-    padding: 0 21px;
   }
 }

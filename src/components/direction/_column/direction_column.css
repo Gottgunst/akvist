@@ -1,0 +1,21 @@
+.direction_column {
+  display: block;
+  width: 100%;
+  /* margin-bottom: -56px; */
+  height: auto;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .direction_column {
+    padding: 0 var(--padding__section);
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .direction_column {
+    padding: 0;
+  }
+}

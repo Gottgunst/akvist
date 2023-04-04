@@ -1,9 +1,0 @@
-.directions_type_two-columns {
-  width: 940px;
-  padding: 0 70px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 100px;
-  row-gap: 92px;
-}

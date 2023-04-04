@@ -1,3 +1,7 @@
 .direction__brand {
   height: 100%;
 }
+
+.direction_column .direction__brand {
+  height: 56px;
+}

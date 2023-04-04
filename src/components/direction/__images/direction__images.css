@@ -1,4 +1,31 @@
 .direction__images {
+  flex-basis: 492px;
+  height: 100%;
   position: relative;
- }
- 
+}
+
+.direction_column .direction__images {
+  height: 332px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .direction__images {
+    flex-basis: auto;
+  }
+
+  .direction_column .direction__images {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .direction__images {
+    height: 220px;
+  }
+
+  .direction_column .direction__images {
+    height: 220px;
+  }
+}

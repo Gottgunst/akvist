@@ -1,14 +1,5 @@
-.direction__button {
-  margin: 52px 0 0;
-  height: 48px;
-  min-width: 169px;
-  border-radius: var(--border-radius_small);
-  padding: 12px 40px 12px 40px;
-  border: 1px solid var(--color__accent_green);
-  background-color: var(--color__bg_white);
-  
-  font-family: var(--font-family_main);
-  font-size: var(--font-size_p);
-  line-height: var(--line-height_p);
-  font-weight: var(--font-weight_medium);
+@media screen and (max-width: 791px) {
+  .direction__button {
+    display: none;
+  }
 }

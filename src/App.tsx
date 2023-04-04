@@ -19,28 +19,20 @@ function App() {
 
         </section>
 
-        <section className='section'>
+        <section className='section section_type_directions'>
 
           {directions.map ((direction, index) =>
-            index < 3 && !direction.deAccent ?
+            index < 4 && !direction.combine ?
             <Direction direction={direction} key={direction.id} /> : "")}
 
         </section>
 
-        {/* <section className='section section_background_grey'>
-          <div className='directions_type_two-columns'>
+        <section className='section section_background_grey section_type_two-columns'>
 
-            {directions.map ((direction) => direction.deAccent ? <Direction direction={direction} key={direction.id}/>:"")}
+            {directions.map ((direction) => direction.combine ? <Direction direction={direction} key={direction.id}/>:"")}
 
-          </div>
-        </section> */}
+        </section>
 
-
-        {/* <section className='section'>
-
-          {directions.map ((direction, index) => index>5&&!direction.deAccent ?<Direction direction={direction}/>:"")}
-
-        </section> */}
 
         {/* <Contacts></Contacts> */}
 

@@ -25,9 +25,9 @@ export function Header() {
           </div>
         </nav>
         <nav className="header__menu-button">
-          
+
           {/* POP-UP version */}
-        
+
         </nav>
 
         <h1 className='header__motto'>

@@ -20,7 +20,11 @@
   --border-radius_small: 4px;
 
 /* --------------------- */
-/* --------------------- */  
+
+  --padding__section: 70px;
+
+
+/* --------------------- */
 
   --transition__link: opacity .3s ease-out ;
 
@@ -32,7 +36,7 @@
 
   --font-size_h1: 42px;
   --line-height_h1: 44px;
-  
+
   --font-size_h2: 32px;
   --line-height_h2: 36px;
 
@@ -63,17 +67,17 @@
 @media screen and (max-width: 1079px) {
   :root {
 
-    --padding-section: 86px;
+    --padding__section: 86px;
 
 /* --------------------- */
 /* --------------------- */
 
     --font-size_h1: 38px;
     --line-height_h1: 40px;
-    
+
     --font-size_h2: 28px;
     --line-height_h2: 32px;
-  
+
     --font-size_h3: 20px;
     --line-height_h3: 24px;
   }
@@ -82,31 +86,29 @@
 @media screen and (max-width: 791px) {
   :root {
 
-    --padding-section: 22px;
+    --padding__section: 22px;
 
 /* --------------------- */
 /* --------------------- */
 
-    --font-size_h1: 24px;
-    --line-height_h1: 28px;
-    
-    --font-size_h2: 20px;
-    --line-height_h2: 24px;
-  
-    --font-size_quote: 20px;
-    --line-height_quote: 28px;
-  
-    --font-size_h3: 16px;
-    --line-height_h3: 24px;
-   
-    --font-size_h4: 14px;
-    --line-height_h4: 20px;
-   
-    --font-size_p: 14px;
-    --line-height_p: 20px;
-  
-    --font-size_p-small: 13px;
-    --line-height_p-small: 16px;
-  
+    --font-size_h1: clamp(24px,7vw,38px);
+    --line-height_h1: clamp(28px,8vw,40px);
+
+    --font-size_h2: clamp(20px,6vw,28px);
+    --line-height_h2: clamp(24px,6vw,32px);
+
+    --font-size_quote: clamp(20px,4vw,24px);
+    --line-height_quote: clamp(28px,4vw,32px);
+
+    --font-size_h3: clamp(16px,3vw,20px);
+
+    --font-size_h4: clamp(14px,5vw,16px);
+
+    --font-size_p: clamp(14px,3vw,16px);
+    --line-height_p: clamp(20px,4.5vw,24px);
+
+    --font-size_p-small: clamp(13px,2vw,14px);
+    --line-height_p-small: clamp(16px,2vw,20px);
+
   }
 }
