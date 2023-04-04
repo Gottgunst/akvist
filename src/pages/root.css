@@ -91,8 +91,8 @@
 /* --------------------- */
 /* --------------------- */
 
-    --font-size_h1: clamp(24px,7vw,38px);
-    --line-height_h1: clamp(28px,8vw,40px);
+    --font-size_h1: clamp(24px,5vw,38px);
+    --line-height_h1: clamp(28px,6vw,40px);
 
     --font-size_h2: clamp(20px,6vw,28px);
     --line-height_h2: clamp(24px,6vw,32px);

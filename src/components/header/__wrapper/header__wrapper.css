@@ -18,7 +18,7 @@
 @media screen and (max-width: 1079px) {
   .header__wrapper {
     /* min-width: 620px; */
-    padding: 0 var(--padding-section);
+    padding: 0 var(--padding__section);
     box-sizing: content-box;
     grid-template-columns: 137px 1fr 55px;
   }

@@ -1,15 +1,18 @@
 .direction {
   display: flex;
   max-width: 940px;
+  width: 100%;
   height: 332px;
   gap: 68px;
   justify-content: flex-start;
   position: relative;
+  margin-bottom: 56px;
 }
 
 .direction:nth-of-type(2n) {
   flex-direction: row-reverse;
 }
+
 
 
 /* --------------MEDIA--------------- */
@@ -18,9 +21,10 @@
   .direction {
     height: 320px;
     box-sizing: border-box;
-    width: 100%;
+    max-width: 100%;
     gap:56px;
     padding: 0 var(--padding__section) 0 0;
+    margin: 0;
   }
 
   .direction:nth-of-type(2n) {
@@ -54,7 +58,6 @@
 .de-accent .direction__img {
   width: 300px;
   height: 108px;
-  border-radius: 0;
 }
 
 .de-accent .direction__texts {
