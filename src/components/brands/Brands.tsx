@@ -1,18 +1,17 @@
-import { IDirectionBrands } from '../../models';
+import { useData } from '../../hooks/data';
+import { IBrand } from '../../models';
 
-interface DirectionBrandProps {
-  brand: IDirectionBrands
+interface IBrandProps {
+  brand: IBrand
   noImage?: boolean
 }
 
-export function Brands({brand, noImage}: DirectionBrandProps) {
+export function Brands({brand, noImage}: IBrandProps) {
   return (
-
     <li>
-      {noImage && <span title={brand.description}>{brand.name}</span>}
-      {!noImage && <img className='direction__brand' src={brand.image} alt={brand.name}/>}
+      {noImage && <span title={brand.description}>{brand.title}</span>}
+      {!noImage && <img className='direction__brand' src={brand.image} alt={brand.title} title={brand.title}/>}
     </li>
-
   );
 }
 

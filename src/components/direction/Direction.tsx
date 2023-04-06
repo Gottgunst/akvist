@@ -1,13 +1,17 @@
-import { IDirection } from '../../models';
+import { IBrand, IDirection } from '../../models';
 import { Brands } from '../../components/brands/Brands';
 
-interface DirectProps {
+interface IDirectProps {
   direction: IDirection
+  baseBrands: IBrand[]
 }
 
-export function Direction({direction}: DirectProps) {
+export function Direction({direction, baseBrands}: IDirectProps) {
+
   const dirType = direction.accent||direction.combine ? 'direction_column' : '';
-  const directionType = 'direction' + ' ' + dirType;
+  const directionType = 'direction ' + dirType;
+  const targetBrands =  direction.brands.split('/');
+
   return (
 
     <article className={directionType} id={direction.title}>
@@ -19,8 +23,11 @@ export function Direction({direction}: DirectProps) {
 
         { !direction.combine &&
           <ul className='direction__brands'>
-          {direction.logos.map(logos =>
-            <Brands brand={logos} key={logos.id} />)}
+
+            {baseBrands.map((el) => targetBrands.map((target)=>
+            el.title == target && <Brands brand={el}/>
+            ))}
+
           </ul>
         }
 
@@ -31,8 +38,11 @@ export function Direction({direction}: DirectProps) {
 
         { !direction.combine &&
           <ul className='direction__brands-name'>
-          {direction.logos.map(logos =>
-            <Brands brand={logos} noImage={true} key={logos.id}/>)}
+
+            {baseBrands.map((el) => targetBrands.map((target)=>
+            el.title == target && <Brands brand={el} noImage={true}/>
+            ))}
+
           </ul>
         }
 

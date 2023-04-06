@@ -1,9 +1,12 @@
 .direction__img {
+  display: block;
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius_main);
+  background: var(--color__bg_grey) center / cover no-repeat;
   object-fit: cover;
   object-position: center;
+  text-align: center;
 }
 
 .section_type_two-columns .direction__img {
@@ -16,6 +19,7 @@
 
 @media screen and (max-width: 1079px) {
   .direction__img {
+    min-width: 350px;
     border-radius: 0 var(--border-radius_main) var(--border-radius_main) 0;
   }
 
@@ -38,6 +42,7 @@
 @media screen and (max-width: 791px) {
   .direction__img,
   .direction:nth-of-type(2n) .direction__img  {
+    min-width: unset;
     border-radius: var(--border-radius_main);
   }
 }

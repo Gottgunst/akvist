@@ -1,211 +1,160 @@
 import { IDirection } from "../models";
 
-export const directions: IDirection [] = [
+export const preDirections: IDirection [] = [
   {
-    id: 1,
+    id_dir: 1,
     title: "Потолочные системы",
-    description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
+    description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
     buttonText: "Подробнее",
-    category: "- 1 -",
-    image: "./images/cover.png",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Albes/Armstrong/Ingermax",
+    city: "Ростов-на-Дону",
     accent: false,
-    combine: false,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-      {
-        id: 2,
-        name: "Armstrong",
-        image: "./images/brands/armstrong.png",
-        link: "#",
-      },
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 2,
-    title: "Лакокрасочные и декоративные покрытия",
-    description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
+    id_dir: 2,
+    title: "Лакокрасочные и декоративные покрытия",
+    description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
     buttonText: "Подробнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Soframap/VincentDecor/Majestic",
+    city: "Ростов-на-Дону",
     accent: false,
-    combine: false,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 3,
+    id_dir: 3,
     title: "Системы звукоизоляции",
-    description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
-    buttonText: "Под робнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
+    description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
+    buttonText: "Подробнее",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Soframap/Барклайн",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: false
+  },
+  {
+    id_dir: 4,
+    title: "Стеклотканевые покрытия для стен и потолков",
+    description: "Рулонные покрытия под покраску для стен и потолков на основе стеклоткани и стеклохолста с нанесённым клеевым составом, активируемым водой",
+    buttonText: "Подробнее",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "Systexx",
+    city: "Ростов-на-Дону",
     accent: true,
-    combine: false,
-    logos: [
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 4,
-    title: "Потолочные системы",
-    description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
+    id_dir: 5,
+    title: "Светотехническое оборудование",
+    description: "Уличное, промышленное, архитектурное и торговое освещение. Светильники для ЖКХ.",
     buttonText: "Подробнее",
-    category: "- 1 -",
-    image: "./images/cover.png",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Varton/Leek/Geniled",
+    city: "Ростов-на-Дону",
     accent: false,
-    combine: false,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-      {
-        id: 2,
-        name: "Armstrong",
-        image: "./images/brands/armstrong.png",
-        link: "#",
-      },
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 5,
-    title: "Лакокрасочные и декоративные покрытия",
-    description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
+    id_dir: 6,
+    title: "Строительные сухие смеси",
+    description: "Штукатурка ручного и механизированного нанесения, шпатлёвка, плиточный клей, гидроизоляция, наливные полы, монтажные смеси, грунтовки",
+    buttonText: "Посмотреть",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "iVsil/Weber/Vetonit",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: true
+  },
+  {
+    id_dir: 7,
+    title: "Гипсокартон и комплектующие",
+    description: "Влагостойкий, огнестойкий, усиленный, звукоизоляционный. Профиль стоечный, потолочный. Ленты армировочные, уголок защитный",
+    buttonText: "Посмотреть",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "Gyproc/Albes/X-glass",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: true
+  },
+  {
+    id_dir: 8,
+    title: "Крепёж и армирующий материал",
+    description: "Саморезы, дюбельная и анкерная техника, метрический крепёж, строительная химия, сетки, серпянки, ленты, скотчи, монтажные пены",
+    buttonText: "Посмотреть",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "/Tech KREP/X-glass",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: true
+  },
+  {
+    id_dir: 9,
+    title: "Утеплитель",
+    description: "Минеральное волокно, каменная вата, экструдированный пенополистирол, пенопласт, рулонaная паро-гидроизоляция, вспененный полиэтилен, трубная изоляция",
+    buttonText: "Посмотреть",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "Isover",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: true
+  },
+  {
+    id_dir: 10,
+    title: "Отопление и водоснабжение",
+    description: "Металлопластиковые трубы и фитинги, газовые котлы, коллектора и комплектующие, электрические системы обогрева, системы антиобледенения кровли",
     buttonText: "Подробнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Henco/Lavita/Hansa/Elco/Daesung",
+    city: "Ростов-на-Дону",
     accent: false,
-    combine: true,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 6,
-    title: "Системы звукоизоляции",
-    description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
-    buttonText: "Под робнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
+    id_dir: 11,
+    title: "Системы распределения тепла",
+    description: "Распределительные коллекторы, квартирные тепловые пункты и монтажные шкафы",
+    buttonText: "Подробнее",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Henco/Lavita/Hansa/Elco/Daesung",
+    city: "Ростов-на-Дону",
+    accent: false,
+    combine: false
+  },
+  {
+    id_dir: 12,
+    title: "Солнечная энергетика",
+    description: "Системы для генерация электрической и тепловой энергии от солнца.",
+    buttonText: "Подробнее",
+    image: "./images/covers/blank.jpg",
+    pageLink: "#",
+    brands: "JinKO/SolaX",
+    city: "Ростов-на-Дону",
     accent: true,
-    combine: true,
-    logos: [
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
+    combine: false
   },
   {
-    id: 7,
-    title: "Потолочные системы",
-    description: "Подвесные металлические и минеральные потолки для жилых, коммерческих, медицинских, общественных и промышленных помещений",
+    id_dir: 13,
+    title: "Крышные котельные",
+    description: "Системы генерации тепла для водоснабжения и отопления многоквартирных домов",
     buttonText: "Подробнее",
-    category: "- 1 -",
-    image: "./images/cover.png",
+    image: "./images/covers/blank.jpg",
     pageLink: "#",
+    brands: "Elco",
+    city: "Ростов-на-Дону",
     accent: false,
-    combine: true,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-      {
-        id: 2,
-        name: "Armstrong",
-        image: "./images/brands/armstrong.png",
-        link: "#",
-      },
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
-  },
-  {
-    id: 8,
-    title: "Лакокрасочные и декоративные покрытия",
-    description: "Для внутренней и наружной отделки жилых, общественных, медицинских, коммерческих помещений ручного и механизированного нанесения.",
-    buttonText: "Подробнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
-    pageLink: "#",
-    accent: false,
-    combine: false,
-    logos: [
-      {
-        id: 1,
-        name: "Албес",
-        image: "./images/brands/albes.png",
-        link: "#",
-      },
-    ]
-  },
-  {
-    id: 9,
-    title: "Системы звукоизоляции",
-    description: "Профессиональная звукоизоляция многоквартирных домов, коммерческих, общественных, медицинских и производственных помещений «под ключ»",
-    buttonText: "Под робнее",
-    category: "- 12 -",
-    image: "./images/cover.png",
-    pageLink: "#",
-    accent: true,
-    combine: false,
-    logos: [
-      {
-        id: 3,
-        name: "Ingermax",
-        image: "./images/brands/ingermax.png",
-        link: "#",
-      },
-    ]
+    combine: false
   }
 ]

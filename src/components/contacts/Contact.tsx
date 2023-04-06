@@ -1,7 +1,7 @@
-import { IContacts } from '../../models';
+import { IContact } from '../../models';
 
 interface ContactProps {
-  cont: IContacts
+  cont: IContact
 }
 
 
