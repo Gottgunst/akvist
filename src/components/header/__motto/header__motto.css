@@ -7,13 +7,13 @@
   grid-area: motto;
 
   background-color: var(--color__accent_green);
-  border-radius: var(--border-radius_main);
+  border-radius: var(--border-radius__main);
   box-shadow: 10px 10px 0 0 var(--color__accent_orange);
 
-  font-family: var(--font-family_h);
-  font-size: var(--font-size_h1);
-  line-height: var(--line-height_h1);
-  font-weight: var(--font-weight_bold);
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h1);
+  line-height: var(--line-height__h1);
+  font-weight: var(--font-weight__bold);
   color: var(--color__text_invert);
 }
 

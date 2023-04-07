@@ -4,10 +4,10 @@
   padding: 0;
   gap: 28px;
 
-  font-family: var(--font-family_h);
-  font-size: var(--font-size_p);
-  line-height: var(--line-height_p);
-  font-weight: var(--font-weight_medium);
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__medium);
   color: var(--color__text_invert);
 }
 
@@ -22,7 +22,7 @@
 
 /* @media screen and (max-width: 791px) {
   .header__menu {
-     
+
   }
 }
  */

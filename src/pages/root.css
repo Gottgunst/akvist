@@ -16,8 +16,8 @@
 /* --------------------- */
 /* --------------------- */
 
-  --border-radius_main: 8px;
-  --border-radius_small: 4px;
+  --border-radius__main: 8px;
+  --border-radius__small: 4px;
 
 /* --------------------- */
 
@@ -31,36 +31,36 @@
 /* --------------------- */
 /* --------------------- */
 
-  --font-family_h: 'Golos Text', sans-serif;
-  --font-family_p: 'Arimo', sans-serif;
+  --font-family__h: 'Golos Text', sans-serif;
+  --font-family__p: 'Arimo', sans-serif;
 
-  --font-size_h1: 42px;
-  --line-height_h1: 44px;
+  --font-size__h1: 42px;
+  --line-height__h1: 44px;
 
-  --font-size_h2: 32px;
-  --line-height_h2: 36px;
+  --font-size__h2: 32px;
+  --line-height__h2: 36px;
 
-  --font-size_quote: 24px;
-  --line-height_quote: 32px;
+  --font-size__quote: 24px;
+  --line-height__quote: 32px;
 
-  --font-size_h3: 22px;
-  --line-height_h3: 24px;
+  --font-size__h3: 22px;
+  --line-height__h3: 24px;
 
-  --font-size_h4: 16px;
-  --line-height_h4: 20px;
+  --font-size__h4: 16px;
+  --line-height__h4: 20px;
 
-  --font-size_p: 16px;
-  --line-height_p: 24px;
+  --font-size__p: 16px;
+  --line-height__p: 24px;
 
-  --font-size_p-small: 14px;
-  --line-height_p-small: 20px;
+  --font-size__p-small: 14px;
+  --line-height__p-small: 20px;
 
-  --font-size_p-tiny: 12px;
-  --line-height_p-tiny: 16px;
+  --font-size__p-tiny: 12px;
+  --line-height__p-tiny: 16px;
 
-  --font-weight_bold: 600;
-  --font-weight_medium: 500;
-  --font-weight_regular: 400;
+  --font-weight__bold: 600;
+  --font-weight__medium: 500;
+  --font-weight__regular: 400;
 
 }
 
@@ -72,14 +72,14 @@
 /* --------------------- */
 /* --------------------- */
 
-    --font-size_h1: 38px;
-    --line-height_h1: 40px;
+    --font-size__h1: 38px;
+    --line-height__h1: 40px;
 
-    --font-size_h2: 28px;
-    --line-height_h2: 32px;
+    --font-size__h2: 28px;
+    --line-height__h2: 32px;
 
-    --font-size_h3: 20px;
-    --line-height_h3: 24px;
+    --font-size__h3: 20px;
+    --line-height__h3: 24px;
   }
 }
 
@@ -91,24 +91,24 @@
 /* --------------------- */
 /* --------------------- */
 
-    --font-size_h1: clamp(24px,5vw,38px);
-    --line-height_h1: clamp(28px,6vw,40px);
+    --font-size__h1: clamp(24px,5vw,38px);
+    --line-height__h1: clamp(28px,6vw,40px);
 
-    --font-size_h2: clamp(20px,6vw,28px);
-    --line-height_h2: clamp(24px,6vw,32px);
+    --font-size__h2: clamp(20px,6vw,28px);
+    --line-height__h2: clamp(24px,6vw,32px);
 
-    --font-size_quote: clamp(20px,4vw,24px);
-    --line-height_quote: clamp(28px,4vw,32px);
+    --font-size__quote: clamp(20px,4vw,24px);
+    --line-height__quote: clamp(28px,4vw,32px);
 
-    --font-size_h3: clamp(16px,3vw,20px);
+    --font-size__h3: clamp(16px,3vw,20px);
 
-    --font-size_h4: clamp(14px,5vw,16px);
+    --font-size__h4: clamp(14px,5vw,16px);
 
-    --font-size_p: clamp(14px,3vw,16px);
-    --line-height_p: clamp(20px,4.5vw,24px);
+    --font-size__p: clamp(14px,3vw,16px);
+    --line-height__p: clamp(20px,4.5vw,24px);
 
-    --font-size_p-small: clamp(13px,2vw,14px);
-    --line-height_p-small: clamp(16px,2vw,20px);
+    --font-size__p-small: clamp(13px,2vw,14px);
+    --line-height__p-small: clamp(16px,2vw,20px);
 
   }
 }

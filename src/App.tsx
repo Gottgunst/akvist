@@ -10,7 +10,7 @@ import { IBrand, IContact, IDirection } from './models';
 
 import { preDirections } from './data/directions';
 import { preBrands } from './data/brands';
-
+import { preContacts } from './data/contacts';
 
 interface IIncomeData {
   data: IDirection & IBrand & IContact & any
@@ -20,19 +20,25 @@ interface IIncomeData {
 
 function App() {
 
-  let city = 'Ростов-на-Дону'
+  let city = 'Ростов-на-Дону';
 
   // получаем дату по всем направлениям
   // пока дата грузится показываем бекап
-  let page = 'Directions'
-  const responseDirections:IIncomeData = useData({page, city})
+  let page = 'Directions';
+  const responseDirections:IIncomeData = useData({page, city});
   const directions:IDirection[] = responseDirections.loading ? preDirections : responseDirections.data;
 
   // получаем дату по всем брендам
   // пока дата грузится показываем бекап
-  page = 'Brands'
-  const responseBrands:IIncomeData = useData({page})
+  page = 'Brands';
+  const responseBrands:IIncomeData = useData({page});
   const baseBrands:IBrand[] = responseBrands.loading ? preBrands : responseBrands.data;
+
+  // получаем дату по всем контактам
+  // пока дата грузится показываем бекап
+  page = 'Contacts';
+  const responseContacts:IIncomeData = useData({page});
+  const baseContacts:IContact[] = responseContacts.loading ? preContacts : responseContacts.data;
 
 
   // Собираем в строку все бренды направлений из комбинированного блока
@@ -87,11 +93,11 @@ function App() {
             <Direction direction={direction} baseBrands={baseBrands} key={direction.id_dir} /> : "")}
 
         </section>
-        {/* <section className='section section_type_contacts'>
+        <section className='section section_type_contacts'>
 
           <Contacts />
 
-        </section> */}
+        </section>
       </main>
 
       {/* <Footer/> */}

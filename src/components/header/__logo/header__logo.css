@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color__bg_white);
-  border-radius: 0 0 var(--border-radius_main) var(--border-radius_main);  
+  border-radius: 0 0 var(--border-radius__main) var(--border-radius__main);
   box-sizing: border-box;
   padding: 6px 14px 0;
 }
@@ -14,7 +14,7 @@
 
 /* @media screen and (max-width: 1079px) {
   .header__logo {
-     
+
   }
 } */
 

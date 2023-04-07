@@ -20,7 +20,6 @@ export interface IBrand {
   direction?: string
 }
 
-
 export interface IContact {
   id_con: number
   title: string
@@ -30,5 +29,18 @@ export interface IContact {
   email: string
   site: string
   image: string
+  city: string
+}
+
+export interface IBranch {
+  id_branch: number
+  title: string
+  address: string
+  schedule: string
+  phone: string
+  cover: string
+  email: string
+  pageLink: string
+  map: string
   city: string
 }

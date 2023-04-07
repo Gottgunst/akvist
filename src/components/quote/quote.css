@@ -4,10 +4,10 @@
   position: relative;
   box-sizing: content-box;
 
-  font-family: var(--font-family_h);
-  font-size: var(--font-size_quote);
-  line-height: var(--line-height_quote);
-  font-weight: var(--font-weight_medium);
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__quote);
+  line-height: var(--line-height__quote);
+  font-weight: var(--font-weight__medium);
 }
 
 .quote::before {

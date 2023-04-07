@@ -2,8 +2,8 @@
   display: none;
   padding-top: 8px;
   color: var(--color__text_p-small);
-  font-size: var(--font-size_p-small);
-  line-height: var(--line-height_p-small);
+  font-size: var(--font-size__p-small);
+  line-height: var(--line-height__p-small);
   gap: 5px;
 }
 

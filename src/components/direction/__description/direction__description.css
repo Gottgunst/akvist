@@ -1,9 +1,9 @@
 .direction__description {
   margin: 12px 0 52px;
 
-  font-size: var(--font-size_p);
-  line-height: var(--line-height_p);
-  font-weight: var(--font-weight_regular);
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__regular);
   color: var(--color__text_p);
 
   max-height: calc(100% - 166px);

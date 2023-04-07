@@ -3,11 +3,11 @@
   padding: 0;
   border: 0;
   background: none;
-  height: var(--line-height_p-small);
+  height: var(--line-height__p-small);
 
-  font-family: var(--font-family_h);
-  font-size: var(--font-size_p-small);
-  font-weight: var(--font-weight_medium);
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__p-small);
+  font-weight: var(--font-weight__medium);
   color: var(--color__text_invert);
 }
 
@@ -15,13 +15,13 @@
 
 @media screen and (max-width: 1079px) {
   .header__city {
-    height: var(--line-height_p);
-    font-size: var(--font-size_p);
+    height: var(--line-height__p);
+    font-size: var(--font-size__p);
   }
 }
 
 /* @media screen and (max-width: 791px) {
   .header__city {
-     
+
   }
 } */
