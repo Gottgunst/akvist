@@ -41,6 +41,5 @@ export function useData({page, city}:IUseDataProps) {
 
   }, [])
 
-
   return {data , error , loading}
 }

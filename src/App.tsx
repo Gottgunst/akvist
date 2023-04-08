@@ -13,7 +13,7 @@ import { preBrands } from './data/brands';
 import { preContacts } from './data/contacts';
 
 interface IIncomeData {
-  data: IDirection & IBrand & IContact & any
+  data: IDirection[] | IBrand[] | IContact[]
   loading: boolean
   error: string
 }
@@ -26,19 +26,19 @@ function App() {
   // пока дата грузится показываем бекап
   let page = 'Directions';
   const responseDirections:IIncomeData = useData({page, city});
-  const directions:IDirection[] = responseDirections.loading ? preDirections : responseDirections.data;
+  const directions = responseDirections.loading ? preDirections : responseDirections.data as IDirection[];
 
   // получаем дату по всем брендам
   // пока дата грузится показываем бекап
   page = 'Brands';
   const responseBrands:IIncomeData = useData({page});
-  const baseBrands:IBrand[] = responseBrands.loading ? preBrands : responseBrands.data;
+  const baseBrands = responseBrands.loading ? preBrands : responseBrands.data as IBrand[];
 
   // получаем дату по всем контактам
   // пока дата грузится показываем бекап
   page = 'Contacts';
   const responseContacts:IIncomeData = useData({page});
-  const baseContacts:IContact[] = responseContacts.loading ? preContacts : responseContacts.data;
+  const baseContacts = responseContacts.loading ? preContacts : responseContacts.data as IContact[];
 
 
   // Собираем в строку все бренды направлений из комбинированного блока
