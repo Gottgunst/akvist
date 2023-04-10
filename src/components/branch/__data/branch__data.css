@@ -1,5 +1,5 @@
 .branch__data {
-  max-width: 300px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   padding: 40px 40px 60px;

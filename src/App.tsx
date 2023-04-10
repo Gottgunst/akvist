@@ -25,13 +25,13 @@ function App() {
 
   // получаем дату
   // пока дата грузится показываем бекап
-  let page = 'Branches';
-  const responseBranches:IIncomeData = useData({page, city});
-  const baseBranches = responseBranches.loading ? preBranch : responseBranches.data as IBranch[];
-
-  page = 'Directions';
+  let page = 'Directions';
   const responseDirections:IIncomeData = useData({page, city});
   const directions = responseDirections.loading ? preDirections : responseDirections.data as IDirection[];
+
+  page = 'Branches';
+  const responseBranches:IIncomeData = useData({page});
+  const baseBranches = responseBranches.loading ? preBranch : responseBranches.data as IBranch[];
 
   page = 'Brands';
   const responseBrands:IIncomeData = useData({page});
@@ -54,7 +54,7 @@ function App() {
     <>
 
       {/* {responseDirections.loading && <div className='overlay'>Загрузка данных из таблицы</div>} */}
-      {responseDirections.error && <div className='overlay'>{responseDirections.error}</div>}
+      {responseBranches.error && <div className='overlay'>{responseBranches.error}</div>}
 
       <Header/>
 
@@ -96,7 +96,7 @@ function App() {
         </section>
         <section className='section section_type_contacts'>
 
-          <Contacts base={baseContacts} branch={baseBranches}/>
+          {baseBranches.map(branch => <Contacts base={baseContacts} branch={branch} key={branch.id_branch}/>)}
 
         </section>
       </main>
