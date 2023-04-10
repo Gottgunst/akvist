@@ -14,11 +14,11 @@ export function Direction({direction, baseBrands}: IDirectProps) {
 
   return (
 
-    <article className={directionType} id={direction.title}>
+    <article className={directionType} id={direction.pageLink}>
 
       <div className='direction__images'>
-        <a className='direction__link' target='_self' href={direction.pageLink} title={direction.title}>
-          <img src={direction.image} alt={direction.title} className='direction__img'/>
+        <a className='direction__link' target='_self' href={`/${direction.pageLink}`} title={direction.title}>
+          <img src={`./images/covers/{${direction.image}`} alt={direction.title} className='direction__img'/>
         </a>
 
         { !direction.combine &&
