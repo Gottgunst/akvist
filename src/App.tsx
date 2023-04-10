@@ -6,14 +6,15 @@ import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
 import { useData } from './hooks/data'
-import { IBrand, IContact, IDirection } from './models';
+import { IBranch, IBrand, IContact, IDirection } from './models';
 
+import { preBranch } from './data/branch';
 import { preDirections } from './data/directions';
 import { preBrands } from './data/brands';
 import { preContacts } from './data/contacts';
 
 interface IIncomeData {
-  data: IDirection[] | IBrand[] | IContact[]
+  data: IDirection[] | IBrand[] | IContact[] | IBranch[]
   loading: boolean
   error: string
 }
@@ -22,20 +23,20 @@ function App() {
 
   let city = 'Ростов-на-Дону';
 
-  // получаем дату по всем направлениям
+  // получаем дату
   // пока дата грузится показываем бекап
-  let page = 'Directions';
+  let page = 'Branches';
+  const responseBranches:IIncomeData = useData({page, city});
+  const baseBranches = responseBranches.loading ? preBranch : responseBranches.data as IBranch[];
+
+  page = 'Directions';
   const responseDirections:IIncomeData = useData({page, city});
   const directions = responseDirections.loading ? preDirections : responseDirections.data as IDirection[];
 
-  // получаем дату по всем брендам
-  // пока дата грузится показываем бекап
   page = 'Brands';
   const responseBrands:IIncomeData = useData({page});
   const baseBrands = responseBrands.loading ? preBrands : responseBrands.data as IBrand[];
 
-  // получаем дату по всем контактам
-  // пока дата грузится показываем бекап
   page = 'Contacts';
   const responseContacts:IIncomeData = useData({page});
   const baseContacts = responseContacts.loading ? preContacts : responseContacts.data as IContact[];
@@ -95,12 +96,12 @@ function App() {
         </section>
         <section className='section section_type_contacts'>
 
-          <Contacts />
+          <Contacts base={baseContacts} branch={baseBranches}/>
 
         </section>
       </main>
 
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }

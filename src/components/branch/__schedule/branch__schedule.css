@@ -1,0 +1,5 @@
+/* .branch__schedule {} */
+
+.branch__schedule::before {
+  content: "График работы";
+}

@@ -1,0 +1,5 @@
+/* .branch__phone {} */
+
+.branch__phone::before {
+  content: "Номер телефона";
+}

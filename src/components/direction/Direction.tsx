@@ -25,7 +25,7 @@ export function Direction({direction, baseBrands}: IDirectProps) {
           <ul className='direction__brands'>
 
             {baseBrands.map((el) => targetBrands.map((target)=>
-            el.title == target && <Brands brand={el}/>
+            el.title == target && <Brands brand={el} key={el.id_brand}/>
             ))}
 
           </ul>
@@ -34,13 +34,13 @@ export function Direction({direction, baseBrands}: IDirectProps) {
       </div>
 
       <div className='direction__texts'>
-        <h3 className='direction__header'>{direction.title}</h3>
+        <h2 className='direction__header'>{direction.title}</h2>
 
         { !direction.combine &&
           <ul className='direction__brands-name'>
 
             {baseBrands.map((el) => targetBrands.map((target)=>
-            el.title == target && <Brands brand={el} noImage={true}/>
+            el.title == target && <Brands brand={el} noImage={true} key={el.id_brand}/>
             ))}
 
           </ul>

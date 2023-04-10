@@ -1,0 +1,14 @@
+.contact__link {
+  color: inherit;
+  opacity: 1;
+  transition: var(--transition__link);
+}
+
+.contact__link:hover,
+.contact__link:focus {
+  opacity: .7;
+}
+
+.contact__link:visited {
+  color: inherit;
+}

@@ -1,36 +1,39 @@
-import { useData } from '../../hooks/data'
+import { IBranch, IContact } from '../../models';
 import { Contact } from './Contact'
 
-import "./contacts.css"
-// import { contacts } from "../../data/contacts";
+interface IContactsProps {
+  base: IContact[]
+  branch: IBranch[]
+}
 
-export function Contacts() {
-
-  // let page = 'Contacts'
-  // const {data, loading, error} = useData({page})
-
-  // const directions = data
+export function Contacts({base, branch}:IContactsProps) {
   return (
 
-
-      <div className="contacts__wrapper">
+      <div className="contacts">
         <h2 className="section__title">Контакты руководителей</h2>
 
         <div className="contacts__grid">
-{/*
-          {contacts.map (contact => <Contact cont={contact}/>
-            )} */}
+
+          {base.map (contact => <Contact contact={contact} key={contact.id_con}/>)}
 
         </div>
-        <div className="contacts__branch">
-          <div className="contacts__address">
-
+        <div className="branch">
+          <div className="branch__data">
+            <h3 className='branch__title'>Вист-Ставрополь</h3>
+            <p >Ставрополь, 2-я Промышленная улица, 16, офис 6</p>
+            <p className='branch__label branch__phone'>+7 8652 56-50-59</p>
+            <p className='branch__label branch__schedule'>08:30–18:30, пн–пт</p>
+          </div>
+          <div className='branch_map'>
 
           </div>
-          <div className="contacts__map"></div>
+          {/* <iframe className="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae8219820a96ab93f2b4f53d850885a474ac8e0c0a0726454ef905b5c3d122483&amp;source=constructor"></iframe> */}
+
         </div>
       </div>
 
 
   );
 }
+
+export default Contacts;

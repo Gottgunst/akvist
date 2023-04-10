@@ -1,0 +1,7 @@
+.contact__title {
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h4);
+  line-height: var(--line-height__h4);
+  font-weight: var(--font-weight__bold);
+  margin-bottom: 8px;
+}

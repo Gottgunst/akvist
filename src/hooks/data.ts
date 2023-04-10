@@ -8,13 +8,13 @@ interface IUseDataProps {
 
 export function useData({page, city}:IUseDataProps) {
 
-  const base:string = "https://script.google.com/macros/s/AKfycbxB0tRe1l1VQiRQ6Bmi9mGXSxPOj9BP3Kh2-5jk9Ov8Ocz87LdUJtYdok7k6c5hbu79/exec"
+  const base:string = "https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec";
 
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  async function fetchDirections() {
+  async function fetchData() {
     try {
       setError('')
       setLoading(true)
@@ -22,22 +22,22 @@ export function useData({page, city}:IUseDataProps) {
       let url:string = page ?  base + "?page=" + page : base;
       url = city ?  url + "&city=" + city : url;
 
-      const response =  await axios.get(url)
+      const response =  await axios.get(url);
 
-      setData(response.data)
-      setLoading(false)
+      setData(response.data);
+      setLoading(false);
 
     } catch (e: unknown) {
-        const error = e as AxiosError
-        setLoading(false)
-        setError(error.message)
+        const error = e as AxiosError;
+        setLoading(false);
+        setError(error.message);
     }
 
   }
 
   useEffect( () => {
 
-    fetchDirections()
+    fetchData();
 
   }, [])
 

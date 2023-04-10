@@ -23,12 +23,13 @@ export interface IBrand {
 export interface IContact {
   id_con: number
   title: string
-  name: string
-  description: string
-  phone: string
-  email: string
-  site: string
-  image: string
+  name?: string
+  description?: string
+  phone?: string
+  email?: string
+  site?: string
+  social?: string
+  image?: string
   city: string
 }
 
@@ -36,6 +37,7 @@ export interface IBranch {
   id_branch: number
   title: string
   address: string
+  address_second?: string
   schedule: string
   phone: string
   cover: string
