@@ -28,7 +28,6 @@
 @import url('../components/welcome/welcome.css');
 @import url('../components/quote/quote.css');
 
-
 @import url('../components/section/section.css');
 @import url('../components/section/_type/section_type_directions.css');
 @import url('../components/section/_type/section_type_two-columns.css');
@@ -36,7 +35,6 @@
 @import url('../components/section/_type/section_type_contacts.css');
 @import url('../components/section/_background/section_background_grey.css');
 @import url('../components/section/__title/section__title.css');
-
 
 @import url('../components/button/button.css');
 
