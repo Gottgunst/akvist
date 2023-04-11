@@ -1,4 +1,18 @@
-export function Header() {
+import { IBranch } from "../../models";
+
+interface IHeaderProps {
+  branches: IBranch[]
+  value: string
+  onChange: any
+}
+
+export function Header({branches, value, onChange}:IHeaderProps) {
+
+  const change = function (event:any) {
+    console.log("Change data to "+ event.target.value);
+    onChange(event.target.value);
+  }
+
   return (
 
     <header className='header'>
@@ -17,11 +31,26 @@ export function Header() {
 
           <div className='header__contact'>
             <p className='header__phone'>
-            <a href='#' className='header__link'>+7 8652 56-50-59</a>
+
+            {branches.map(branch =>
+              (branch.city == value &&
+                (<a href={`tel:+${branch.phone}`} key={branch.id_branch} className='header__link' target="_blank">
+                +{branch.phone}
+                </a>)
+            ))}
+
             </p>
-            <select className='header__city'>
-              <option>Ставрополь</option>
+
+            <select className='header__select'
+              value={value}
+              onChange={change}>
+
+              {branches.map(branch => (
+                <option className="header__city" value={branch.city} key={branch.id_branch}>{branch.city}</option>
+              ))}
+
             </select>
+
           </div>
         </nav>
         <nav className="header__menu-button">

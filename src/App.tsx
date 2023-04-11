@@ -1,10 +1,13 @@
 import { Header } from './components/header/Header'
 import { Quote } from './components/quote/Quote'
-import { Direction } from './components/direction/Direction'
-import { Brands } from './components/brands/Brands';
 import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
+import { PageDirections } from './pages/PageDirections'
+
+
+import { useState } from 'react';
+import { Route, Routes, Link } from 'react-router-dom'
 import { useData } from './hooks/data'
 import { IBranch, IBrand, IContact, IDirection } from './models';
 
@@ -12,6 +15,7 @@ import { preBranch } from './data/branch';
 import { preDirections } from './data/directions';
 import { preBrands } from './data/brands';
 import { preContacts } from './data/contacts';
+
 
 interface IIncomeData {
   data: IDirection[] | IBrand[] | IContact[] | IBranch[]
@@ -21,16 +25,15 @@ interface IIncomeData {
 
 function App() {
 
-  let city = 'Ростов-на-Дону';
-
-  // получаем дату
+  // получаем всю дату
   // пока дата грузится показываем бекап
   let page = 'Directions';
+  const city = '*';
   const responseDirections:IIncomeData = useData({page, city});
-  const directions = responseDirections.loading ? preDirections : responseDirections.data as IDirection[];
+  const baseDirections = responseDirections.loading ? preDirections : responseDirections.data as IDirection[];
 
   page = 'Branches';
-  const responseBranches:IIncomeData = useData({page});
+  const responseBranches:IIncomeData = useData({page, city});
   const baseBranches = responseBranches.loading ? preBranch : responseBranches.data as IBranch[];
 
   page = 'Brands';
@@ -38,25 +41,18 @@ function App() {
   const baseBrands = responseBrands.loading ? preBrands : responseBrands.data as IBrand[];
 
   page = 'Contacts';
-  const responseContacts:IIncomeData = useData({page});
+  const responseContacts:IIncomeData = useData({page, city});
   const baseContacts = responseContacts.loading ? preContacts : responseContacts.data as IContact[];
 
-
-  // Собираем в строку все бренды направлений из комбинированного блока
-  // Нарезаем строку в массив
-  // Фильтруем массив от повторов
-  let combineBrands:string = "";
-  directions.forEach((el) => el.combine ? combineBrands += el.brands + '/':"");
-  const combineArray = combineBrands.split('/');
-  const targetBrands = combineArray.filter((value, index) => combineArray.indexOf(value) === index);
+  const [branchTarget, setBranchTarget] = useState("Ростов-на-Дону");
 
   return (
     <>
 
-      {/* {responseDirections.loading && <div className='overlay'>Загрузка данных из таблицы</div>} */}
+      {responseDirections.loading==false && console.log("=Loading Done=")}
       {responseBranches.error && <div className='overlay'>{responseBranches.error}</div>}
 
-      <Header/>
+      <Header value={branchTarget} branches={baseBranches} onChange={setBranchTarget}/>
 
       <main>
         <section className='welcome'>
@@ -64,44 +60,30 @@ function App() {
           <Quote />
 
         </section>
-        <section className='section section_type_directions'>
 
-          {directions.map((direction, index) =>
-            index < 4 && !direction.combine ?
-            <Direction direction={direction} baseBrands={baseBrands} key={direction.id_dir} /> : "")}
+        <Routes>
+          <Route
+            path='/:branch?/'
+            element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===branchTarget})} baseBrands={baseBrands}/>}
+          />
+        </Routes>
 
-        </section>
-        <section className='section section_background_grey section_type_two-columns'>
 
-          {directions.map((direction) =>
-            direction.combine ?
-            <Direction direction={direction} baseBrands={baseBrands} key={direction.id_dir}/> : "")}
-
-        </section>
-        <section className='section section_type_brands-grid'>
-          <ul className='grid'>
-
-            {baseBrands.map((el) => targetBrands.map((target)=>
-              el.title == target && <Brands brand={el} key={el.id_brand}/>
-              ))}
-
-          </ul>
-        </section>
-        <section className='section section_type_directions'>
-
-          {directions.map((direction, index) =>
-            index > 4 && !direction.combine ?
-            <Direction direction={direction} baseBrands={baseBrands} key={direction.id_dir} /> : "")}
-
-        </section>
         <section className='section section_type_contacts'>
 
-          {baseBranches.map(branch => <Contacts base={baseContacts} branch={branch} key={branch.id_branch}/>)}
+          {baseBranches.map((branch, index) =>
+            branch.city===branchTarget &&
+            <Contacts
+              contacts={baseContacts.filter(el=>{return el.city===branchTarget})}
+              branch={branch}
+              key={index}
+            />)}
 
         </section>
       </main>
 
       <Footer/>
+
     </>
   );
 }

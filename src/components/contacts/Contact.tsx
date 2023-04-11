@@ -4,8 +4,8 @@ interface ContactProps {
   contact: IContact
 }
 
-
 export function Contact({contact}: ContactProps, key: number) {
+
   return (
 
   <div className="contact">

@@ -1,18 +1,17 @@
-import React from 'react';
 import { IBranch, IContact } from '../../models';
 import { Contact } from './Contact'
 
 interface IContactsProps {
-  base: IContact[]
+  contacts: IContact[]
   branch: IBranch
 }
 
-export function Contacts({base, branch}:IContactsProps) {
+export function Contacts({contacts, branch}:IContactsProps) {
 
-const mapStatic = `url(https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%${branch.map}&width=650&height=450)`;
-const mapWidget = `https://yandex.ru/map-widget/v1/?um=constructor%${branch.map}&scroll=false`;
-const mapLink = (e:any) => {window.open(`https://yandex.ru/maps/?um=constructor%${branch.map}&source=constructorStatic`);};
-
+  // Подготовка ссылок для карт
+  const mapStatic = `url(https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%${branch.map}&width=650&height=450)`;
+  const mapWidget = `https://yandex.ru/map-widget/v1/?um=constructor%${branch.map}&scroll=false`;
+  const mapLink = (e:any) => {window.open(`https://yandex.ru/maps/?um=constructor%${branch.map}&source=constructorStatic`);};
 
   return (
 
@@ -21,7 +20,7 @@ const mapLink = (e:any) => {window.open(`https://yandex.ru/maps/?um=constructor%
 
         <div className="contacts__grid">
 
-          {base.map (contact => <Contact contact={contact} key={contact.id_con}/>)}
+          {contacts.map(contact => <Contact contact={contact} key={contact.id_con}/>)}
 
         </div>
         <div className="branch">

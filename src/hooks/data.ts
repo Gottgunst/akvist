@@ -18,6 +18,7 @@ export function useData({page, city}:IUseDataProps) {
     try {
       setError('')
       setLoading(true)
+      console.log("Loading "+page);
 
       let url:string = page ?  base + "?page=" + page : base;
       url = city ?  url + "&city=" + city : url;
