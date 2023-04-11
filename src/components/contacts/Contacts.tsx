@@ -1,3 +1,4 @@
+import React from 'react';
 import { IBranch, IContact } from '../../models';
 import { Contact } from './Contact'
 
@@ -7,6 +8,12 @@ interface IContactsProps {
 }
 
 export function Contacts({base, branch}:IContactsProps) {
+
+const mapStatic = `url(https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%${branch.map}&width=650&height=450)`;
+const mapWidget = `https://yandex.ru/map-widget/v1/?um=constructor%${branch.map}&scroll=false`;
+const mapLink = (e:any) => {window.open(`https://yandex.ru/maps/?um=constructor%${branch.map}&source=constructorStatic`);};
+
+
   return (
 
       <div className="contacts">
@@ -38,8 +45,8 @@ export function Contacts({base, branch}:IContactsProps) {
             </p>
 
           </div>
-          <div className='branch__map'>
-            <iframe className="branch__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae8219820a96ab93f2b4f53d850885a474ac8e0c0a0726454ef905b5c3d122483&amp;source=constructor"></iframe>
+          <div className='branch__map' style={{backgroundImage:mapStatic}} onClick={mapLink}>
+            <iframe className="branch__iframe" src={mapWidget}></iframe>
           </div>
         </div>
       </div>

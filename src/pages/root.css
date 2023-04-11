@@ -94,15 +94,15 @@
     --font-size__h1: clamp(24px,5vw,38px);
     --line-height__h1: clamp(28px,6vw,40px);
 
-    --font-size__h2: clamp(20px,6vw,28px);
-    --line-height__h2: clamp(24px,6vw,32px);
+    --font-size__h2: clamp(20px,5vw,28px);
+    --line-height__h2: clamp(24px,5vw,32px);
 
     --font-size__quote: clamp(20px,4vw,24px);
     --line-height__quote: clamp(28px,4vw,32px);
 
     --font-size__h3: clamp(16px,3vw,20px);
 
-    --font-size__h4: clamp(14px,5vw,16px);
+    --font-size__h4: clamp(14px,3vw,16px);
 
     --font-size__p: clamp(14px,3vw,16px);
     --line-height__p: clamp(20px,4.5vw,24px);

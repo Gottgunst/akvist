@@ -12,14 +12,15 @@
   .contacts__grid {
     margin-top: 72px;
     padding-right: 0;
-    gap: 54px clamp(54px,5vw,100px);
+    gap: 54px;
+    justify-content: space-around;
   }
 }
 
 @media screen and (max-width: 791px) {
   .contacts__grid {
     margin-top: 32px;
-    gap: 32px clamp(32px,8vw,100px);
-    padding: 0 0 0 35px;
+    gap: 32px;
+    padding-right: 40px;
   }
 }
