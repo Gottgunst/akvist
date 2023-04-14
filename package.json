@@ -1,5 +1,6 @@
 {
   "name": "react-try",
+  "homepage": "https://test.gottgunst.ru/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
