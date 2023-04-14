@@ -1,16 +1,25 @@
+import { useContext } from "react";
 import { IBranch } from "../../models";
+import { useNavigate } from "react-router-dom";
+import { BranchContext } from "../../context";
 
 interface IHeaderProps {
   branches: IBranch[]
-  value: string
-  onChange: any
 }
 
-export function Header({branches, value, onChange}:IHeaderProps) {
+export function Header({branches}:IHeaderProps) {
+
+  const {targetBranch, setTargetBranch} = useContext(BranchContext);
+  const navigate = useNavigate();
 
   const change = function (event:any) {
+
+    event.preventDefault();
+
     console.log("Change data to "+ event.target.value);
-    onChange(event.target.value);
+    setTargetBranch(event.target.value);
+
+    branches?.forEach(branch => branch.city === event.target.value ? navigate(branch.pageLink):"");
   }
 
   return (
@@ -33,8 +42,8 @@ export function Header({branches, value, onChange}:IHeaderProps) {
             <p className='header__phone'>
 
             {branches.map(branch =>
-              (branch.city == value &&
-                (<a href={`tel:+${branch.phone}`} key={branch.id_branch} className='header__link' target="_blank">
+              (branch.city === targetBranch &&
+                (<a href={`tel:+${branch.phone}`} key={branch.id_branch} className='header__link' target="_blank" rel="noreferrer">
                 +{branch.phone}
                 </a>)
             ))}
@@ -42,7 +51,7 @@ export function Header({branches, value, onChange}:IHeaderProps) {
             </p>
 
             <select className='header__select'
-              value={value}
+              value={targetBranch}
               onChange={change}>
 
               {branches.map(branch => (

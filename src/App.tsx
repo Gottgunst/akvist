@@ -5,9 +5,10 @@ import { Footer } from './components/footer/Footer'
 
 import { PageDirections } from './pages/PageDirections'
 
+import './pages/index.css';
 
 import { useState } from 'react';
-import { Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
 import { useData } from './hooks/data'
 import { IBranch, IBrand, IContact, IDirection } from './models';
 
@@ -15,6 +16,7 @@ import { preBranch } from './data/branch';
 import { preDirections } from './data/directions';
 import { preBrands } from './data/brands';
 import { preContacts } from './data/contacts';
+import { BranchContext } from './context'
 
 
 interface IIncomeData {
@@ -22,6 +24,7 @@ interface IIncomeData {
   loading: boolean
   error: string
 }
+
 
 function App() {
 
@@ -44,46 +47,82 @@ function App() {
   const responseContacts:IIncomeData = useData({page, city});
   const baseContacts = responseContacts.loading ? preContacts : responseContacts.data as IContact[];
 
-  const [branchTarget, setBranchTarget] = useState("Ростов-на-Дону");
+
+  const [targetBranch, setTargetBranch] = useState(()=> {
+    const location = window.location.pathname.split('/');
+    console.log(location);
+    switch (location[1]) {
+      case "Krasnodar":
+        return "Краснодар";
+
+      case "Stavropol":
+        return "Ставрополь";
+
+      case "Pyatigorsk":
+        return "Пятигорск";
+
+      default:
+        return "Ростов-на-Дону"
+
+    }
+  });
+
 
   return (
     <>
+    {responseDirections.loading===false && console.log("=Loading Done=")}
+    {responseBranches.error && <div className='overlay'>{responseBranches.error}</div>}
 
-      {responseDirections.loading==false && console.log("=Loading Done=")}
-      {responseBranches.error && <div className='overlay'>{responseBranches.error}</div>}
+    <BranchContext.Provider value={{targetBranch, setTargetBranch}}>
+      <BrowserRouter>
 
-      <Header value={branchTarget} branches={baseBranches} onChange={setBranchTarget}/>
+        <Header branches={baseBranches}/>
 
-      <main>
-        <section className='welcome'>
+        <main>
+          <section className='welcome'>
 
-          <Quote />
+            <Quote />
 
-        </section>
+          </section>
 
-        <Routes>
-          <Route
-            path='/:branch?/'
-            element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===branchTarget})} baseBrands={baseBrands}/>}
-          />
-        </Routes>
+          <Routes>
+            <Route path='/'
+            element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})} baseBrands={baseBrands}/>}>
+              <Route path='Rostov-na-Donu' element={<Navigate to='/' replace />} />
+              <Route path='Krasnodar'>
+                <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
+              </Route>
+              <Route path='Stavropol'>
+               <Route path='*' element={<Navigate to='/Stavropol' replace />} />
+              </Route>
+              <Route path='Pyatigorsk'>
+                <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
+              </Route>
+              <Route path='*' element={<Navigate to='/' replace />} />
+            </Route>
 
 
-        <section className='section section_type_contacts'>
 
-          {baseBranches.map((branch, index) =>
-            branch.city===branchTarget &&
-            <Contacts
-              contacts={baseContacts.filter(el=>{return el.city===branchTarget})}
-              branch={branch}
-              key={index}
-            />)}
 
-        </section>
-      </main>
+          </Routes>
 
-      <Footer/>
 
+          <section className='section section_type_contacts'>
+
+            {baseBranches.map((branch, index) =>
+              branch.city===targetBranch &&
+              <Contacts
+                contacts={baseContacts.filter(el=>{return el.city===targetBranch})}
+                branch={branch}
+                key={index}
+              />)}
+
+          </section>
+        </main>
+
+        <Footer/>
+      </BrowserRouter>
+    </BranchContext.Provider>
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Direction } from '../components/direction/Direction'
 import { Brands } from '../components/brands/Brands';
 
 import { IBrand, IDirection } from "../models";
-import { useParams } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 interface IPageDirectionsProps {
   baseDirections: IDirection[]
@@ -10,9 +10,6 @@ interface IPageDirectionsProps {
 }
 
 export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProps) {
-
-  let params = useParams();
-  console.log(params.branch);
 
   // За один пробег делим направления на три группы
   // Находим id первого из комбинированных направлений
@@ -50,6 +47,8 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
 
   return (
     <>
+      <Outlet></Outlet>
+
       <section className='section section_type_directions'>
 
         {firstPart}
@@ -66,7 +65,7 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
         <ul className='grid'>
 
           {baseBrands.map((el) => targetBrands.map((target)=>
-            el.title == target && <Brands brand={el} key={el.id_brand}/>
+            el.title === target && <Brands brand={el} key={el.id_brand}/>
             ))}
 
         </ul>
