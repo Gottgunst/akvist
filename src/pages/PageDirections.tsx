@@ -18,7 +18,7 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
   let firstPart:JSX.Element[] = [];
   let combinePart:JSX.Element[] = [];
   let secondPart:JSX.Element[] = [];
-  let combineFirstIndex:number = 999;
+  let combineFirstIndex:number = Infinity;
   let combineBrands:string = "";
 
   baseDirections.map((direction) => {
@@ -26,7 +26,7 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
 
       combineBrands += direction.brands+"/";
 
-      if(combineFirstIndex===999) combineFirstIndex = direction.id_dir;
+      if(!Number.isFinite(combineFirstIndex)) combineFirstIndex = direction.id_dir;
 
       combinePart.push(
       <Direction direction={direction} baseBrands={baseBrands} key={direction.id_dir} />);

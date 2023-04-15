@@ -88,6 +88,7 @@ function App() {
           <Routes>
             <Route path='/'
             element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})} baseBrands={baseBrands}/>}>
+
               <Route path='Rostov-na-Donu' element={<Navigate to='/' replace />} />
               <Route path='Krasnodar'>
                 <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
@@ -99,6 +100,7 @@ function App() {
                 <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
               </Route>
               <Route path='*' element={<Navigate to='/' replace />} />
+
             </Route>
 
 
