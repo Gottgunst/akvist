@@ -58,7 +58,11 @@
 
 @import url('../components/contact/contact.css');
 @import url('../components/contact/__title/contact__title.css');
+@import url('../components/contact/__data/contact__data.css');
+@import url('../components/contact/__name/contact__name.css');
 @import url('../components/contact/__link/contact__link.css');
+@import url('../components/contact/__buttons/contact__buttons.css');
+@import url('../components/contact/__button/contact__button.css');
 
 @import url('../components/branch/branch.css');
 @import url('../components/branch/__data/branch__data.css');

@@ -7,6 +7,8 @@
   --color__bg_dark: #434350;
   --color__bg_popup: #84858E;
 
+  --color__border_white: rgba(255, 255, 255, 0.6);
+
   --color__text_main: #000;
   --color__text_invert: #fff;
   --color__text_p: #555;

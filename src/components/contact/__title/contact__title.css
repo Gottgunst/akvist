@@ -1,7 +1,8 @@
 .contact__title {
   font-family: var(--font-family__h);
-  font-size: var(--font-size__h4);
-  line-height: var(--line-height__h4);
+  font-size: var(--font-size__h3);
+  line-height: var(--line-height__h3);
   font-weight: var(--font-weight__bold);
-  margin-bottom: 8px;
+  padding-bottom: 24px;
+  flex-shrink: 0;
 }

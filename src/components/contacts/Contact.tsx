@@ -10,9 +10,9 @@ export function Contact({contact}: ContactProps, key: number) {
 
   <div className="contact">
     <h3 className="contact__title">{contact.title}</h3>
-    <ul>
+    <ul className='contact__data'>
 
-      {contact.name && <li>{contact.name}</li>}
+      {contact.name && <li className='contact__name'>{contact.name}</li>}
 
       {contact.email && <li>
         <a href={`mailto:${contact.email}`} target='_blank' className='contact__link'>
@@ -35,6 +35,12 @@ export function Contact({contact}: ContactProps, key: number) {
         </a></li>}
 
     </ul>
+
+    <div className="contact__buttons">
+      <button className="button contact__button" name="phone" aria-label="Позвонить" title='Позвонить'/>
+      <button className="button contact__button" name="email" aria-label="Написать" title='Написать'/>
+    </div>
+
   </div>
 
   );

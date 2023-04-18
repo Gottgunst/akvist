@@ -1,26 +1,23 @@
 .contacts__grid {
-  margin: 94px auto 0;
-  padding-right: 80px;
+  padding: 79px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 220px);
-  gap: 84px 100px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 100px 20px;
 }
 
 /* --------------MEDIA--------------- */
 
 @media screen and (max-width: 1079px) {
   .contacts__grid {
-    margin-top: 72px;
-    padding-right: 0;
-    gap: 54px;
+    padding-top: 72px;
+    gap: 68px 20px;
     justify-content: space-around;
   }
 }
 
 @media screen and (max-width: 791px) {
   .contacts__grid {
-    margin-top: 32px;
-    gap: 32px;
-    padding-right: 40px;
+    padding-top: 32px;
+    gap: 44px;
   }
 }
