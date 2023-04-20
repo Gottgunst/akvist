@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { IBranch } from "../../models";
-import { useNavigate } from "react-router-dom";
-import { BranchContext } from "../../context";
+import { useContext } from 'react';
+import { IBranch } from '../../models';
+import { useNavigate } from 'react-router-dom';
+import { BranchContext } from '../../context';
 
 interface IHeaderProps {
   branches: IBranch[]
@@ -16,17 +16,17 @@ export function Header({branches}:IHeaderProps) {
 
     event.preventDefault();
 
-    console.log("Change data to "+ event.target.value);
+    console.log('Change data to '+ event.target.value);
     setTargetBranch(event.target.value);
 
-    branches?.forEach(branch => branch.city === event.target.value ? navigate(branch.pageLink):"");
+    branches?.forEach(branch => branch.city === event.target.value ? navigate(branch.pageLink):'');
   }
 
   return (
 
     <header className='header'>
       <div className='header__wrapper'>
-        <div className='header__logo'>
+        <div className='header__logo logo'>
           <img src='./images/logos/Akvist.svg' alt='Логотип АКВИСТ' className='logo' />
         </div>
 
@@ -43,7 +43,7 @@ export function Header({branches}:IHeaderProps) {
 
             {branches.map(branch =>
               (branch.city === targetBranch &&
-                (<a href={`tel:+${branch.phone}`} key={branch.id_branch} className='header__link' target="_blank" rel="noreferrer">
+                (<a href={`tel:+${branch.phone}`} key={branch.id_branch} className='header__link' target='_blank' rel='noreferrer'>
                 +{branch.phone}
                 </a>)
             ))}
@@ -55,14 +55,14 @@ export function Header({branches}:IHeaderProps) {
               onChange={change}>
 
               {branches.map(branch => (
-                <option className="header__city" value={branch.city} key={branch.id_branch}>{branch.city}</option>
+                <option className='header__city' value={branch.city} key={branch.id_branch}>{branch.city}</option>
               ))}
 
             </select>
 
           </div>
         </nav>
-        <nav className="header__menu-button">
+        <nav className='header__menu-button'>
 
           {/* POP-UP version */}
 

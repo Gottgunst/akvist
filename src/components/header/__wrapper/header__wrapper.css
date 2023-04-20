@@ -9,8 +9,8 @@
   align-items: start;
   align-content: space-between;
   grid-template-areas:
-  "logo nav nav"
-  "motto motto motto";
+  'logo nav nav'
+  'motto motto motto';
 }
 
 /* --------------MEDIA--------------- */

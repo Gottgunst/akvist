@@ -1,5 +1,5 @@
-import axios, { AxiosError } from "axios"
-import { useEffect, useState } from "react"
+import axios, { AxiosError } from 'axios'
+import { useEffect, useState } from 'react'
 
 interface IUseDataProps {
   page?: string
@@ -8,20 +8,20 @@ interface IUseDataProps {
 
 export function useData({page, city}:IUseDataProps) {
 
-  const base:string = "https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec";
+  const base:string = 'https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec';
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   async function fetchData() {
     try {
       setError('')
       setLoading(true)
-      console.log("Loading "+page);
+      console.log('Loading '+page);
 
-      let url:string = page ?  base + "?page=" + page : base;
-      url = city ?  url + "&city=" + city : url;
+      let url:string = page ?  base + '?page=' + page : base;
+      url = city ?  url + '&city=' + city : url;
 
       const response =  await axios.get(url);
 

@@ -1,24 +1,11 @@
 .contact__link {
   color: inherit;
-  opacity: 1;
-  transition: var(--transition__link);
 }
-
-.contact__link:hover,
-.contact__link:focus {
-  opacity: .7;
-}
-
-.contact__link:visited {
-  color: inherit;
-}
-
 
 /* --------------MEDIA--------------- */
 
 /* @media screen and (max-width: 1079px) {
   .contact__link {
-
   }
 } */
 
@@ -26,6 +13,7 @@
   .contact__link {
     pointer-events: none;
   }
+
   .contact__link:hover,
   .contact__link:focus {
     opacity: 1;

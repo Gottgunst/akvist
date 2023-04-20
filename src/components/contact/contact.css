@@ -24,7 +24,7 @@
   }
 
   .contact:before {
-    content: "";
+    content: '';
     height: 1px;
     width: 100%;
     margin-bottom: 44px;

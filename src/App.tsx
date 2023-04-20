@@ -51,17 +51,17 @@ function App() {
   const [targetBranch, setTargetBranch] = useState(()=> {
     const location = window.location.pathname.split('/');
     switch (location[1]) {
-      case "Krasnodar":
-        return "Краснодар";
+      case 'Krasnodar':
+        return 'Краснодар';
 
-      case "Stavropol":
-        return "Ставрополь";
+      case 'Stavropol':
+        return 'Ставрополь';
 
-      case "Pyatigorsk":
-        return "Пятигорск";
+      case 'Pyatigorsk':
+        return 'Пятигорск';
 
       default:
-        return "Ростов-на-Дону"
+        return 'Ростов-на-Дону'
 
     }
   });
@@ -69,7 +69,7 @@ function App() {
 
   return (
     <>
-    {responseDirections.loading===false && console.log("=Loading Done=")}
+    {responseDirections.loading===false && console.log('=Loading Done=')}
     {responseBranches.error && <div className='overlay'>{responseBranches.error}</div>}
 
     <BranchContext.Provider value={{targetBranch, setTargetBranch}}>
@@ -89,24 +89,26 @@ function App() {
             element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})} baseBrands={baseBrands}/>}>
 
               <Route path='Rostov-na-Donu' element={<Navigate to='/' replace />} />
+              <Route path='Rostov' element={<Navigate to='/' replace />} />
+
               <Route path='Krasnodar'>
                 <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
               </Route>
               <Route path='Stavropol'>
                <Route path='*' element={<Navigate to='/Stavropol' replace />} />
               </Route>
+
               <Route path='Pyatigorsk'>
                 <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
               </Route>
+              <Route path='Pitigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+              <Route path='Patigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+              <Route path='Piatigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+
               <Route path='*' element={<Navigate to='/' replace />} />
 
             </Route>
-
-
-
-
           </Routes>
-
 
           <section className='section section_type_contacts'>
 
@@ -121,7 +123,11 @@ function App() {
           </section>
         </main>
 
-        <Footer/>
+        <Footer
+          branches={baseBranches}
+          baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})}
+        />
+
       </BrowserRouter>
     </BranchContext.Provider>
     </>

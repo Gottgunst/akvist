@@ -15,16 +15,16 @@ export function Contacts({contacts, branch}:IContactsProps) {
 
   return (
 
-      <div className="contacts">
-        <h2 className="section__title">Контакты руководителей</h2>
+      <div className='contacts'>
+        <h2 className='section__title'>Контакты руководителей</h2>
 
-        <div className="contacts__grid">
+        <div className='contacts__grid'>
 
           {contacts.map(contact => <Contact contact={contact} key={contact.id_con}/>)}
 
         </div>
-        <div className="branch">
-          <div className="branch__data">
+        <div className='branch'>
+          <div className='branch__data'>
             <h3 className='branch__title'>
               {branch.title}
             </h3>
@@ -34,18 +34,18 @@ export function Contacts({contacts, branch}:IContactsProps) {
 
             {branch.address_second && <p>{branch.address_second}</p>}
 
-            <p className='branch__label branch__phone'>
-              <a href={`tel:+${branch.phone}`} target='_blank' className='contact__link'>
+            <p className='branch__label' aria-label='Телефон'>
+              <a href={`tel:+${branch.phone}`} target='_blank' className='link'>
               +{branch.phone}
             </a></p>
 
-            <p className='branch__label branch__schedule'>
+            <p className='branch__label' aria-label='Расписание'>
               {branch.schedule}
             </p>
 
           </div>
           <div className='branch__map' style={{backgroundImage:mapStatic}} onClick={mapLink}>
-            <iframe className="branch__iframe" src={mapWidget}></iframe>
+            <iframe className='branch__iframe' src={mapWidget}></iframe>
           </div>
         </div>
       </div>

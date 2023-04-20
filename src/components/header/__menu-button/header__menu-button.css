@@ -11,7 +11,7 @@
 }
 
 .header__menu-button::before {
-  content: "";
+  content: '';
   background-image: url('../../../../public/images/svg/menu.svg');
   background-size: contain;
   background-position: center;

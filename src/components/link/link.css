@@ -1,0 +1,14 @@
+.link {
+  color: inherit;
+  opacity: 1;
+  transition: var(--transition__link);
+}
+
+.link:hover,
+.link:focus {
+  opacity: .6;
+}
+
+.link:visited {
+  color: inherit;
+}

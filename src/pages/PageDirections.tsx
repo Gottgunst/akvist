@@ -1,7 +1,7 @@
 import { Direction } from '../components/direction/Direction'
 import { Brands } from '../components/brands/Brands';
 
-import { IBrand, IDirection } from "../models";
+import { IBrand, IDirection } from '../models';
 import { Outlet } from 'react-router-dom';
 
 interface IPageDirectionsProps {
@@ -19,12 +19,12 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
   let combinePart:JSX.Element[] = [];
   let secondPart:JSX.Element[] = [];
   let combineFirstIndex:number = Infinity;
-  let combineBrands:string = "";
+  let combineBrands:string = '';
 
   baseDirections.map((direction) => {
     if (direction.combine){
 
-      combineBrands += direction.brands+"/";
+      combineBrands += direction.brands+'/';
 
       if(!Number.isFinite(combineFirstIndex)) combineFirstIndex = direction.id_dir;
 
