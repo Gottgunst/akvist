@@ -1,5 +1,5 @@
 .contacts__grid {
-  padding: 79px auto 0;
+  padding-top: 79px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   gap: 100px 20px;
@@ -10,7 +10,7 @@
 @media screen and (max-width: 1079px) {
   .contacts__grid {
     padding-top: 72px;
-    gap: 68px 20px;
+    gap: 68px 0;
     justify-content: space-around;
   }
 }

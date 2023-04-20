@@ -5,4 +5,5 @@
   font-weight: var(--font-weight__bold);
   padding-bottom: 24px;
   flex-shrink: 0;
+  max-width: 90%;
 }

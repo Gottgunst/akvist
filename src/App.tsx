@@ -50,7 +50,6 @@ function App() {
 
   const [targetBranch, setTargetBranch] = useState(()=> {
     const location = window.location.pathname.split('/');
-    console.log(location);
     switch (location[1]) {
       case "Krasnodar":
         return "Краснодар";

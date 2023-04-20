@@ -12,3 +12,22 @@
 .contact__link:visited {
   color: inherit;
 }
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .contact__link {
+
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .contact__link {
+    pointer-events: none;
+  }
+  .contact__link:hover,
+  .contact__link:focus {
+    opacity: 1;
+  }
+}

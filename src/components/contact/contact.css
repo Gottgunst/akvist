@@ -17,10 +17,18 @@
 
 @media screen and (max-width: 791px) {
   .contact {
-    padding-top: 44px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px solid var(--color__border_white);
+    /* border-top: 1px solid var(--color__border_white); */
   }
+
+  .contact:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-bottom: 44px;
+    background-image: var(--color__border_gradient);
+  }
+
 }

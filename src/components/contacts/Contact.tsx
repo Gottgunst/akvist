@@ -1,10 +1,18 @@
+import { MouseEventHandler } from 'react';
 import { IContact } from '../../models';
 
 interface ContactProps {
   contact: IContact
 }
 
+
+function linker(evt:any){
+  window.open(evt.target.value);
+}
+
 export function Contact({contact}: ContactProps, key: number) {
+
+
 
   return (
 
@@ -37,8 +45,8 @@ export function Contact({contact}: ContactProps, key: number) {
     </ul>
 
     <div className="contact__buttons">
-      <button className="button contact__button" name="phone" aria-label="Позвонить" title='Позвонить'/>
-      <button className="button contact__button" name="email" aria-label="Написать" title='Написать'/>
+      <button className="button contact__button" name="phone" aria-label="Позвонить" title='Позвонить' onClick={linker} type='button' value={`tel:+${contact.phone}`}/>
+      <button className="button contact__button" name="email" aria-label="Написать" title='Написать' onClick={linker} type='button' value={`mailto:${contact.email}`}/>
     </div>
 
   </div>
