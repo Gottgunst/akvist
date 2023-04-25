@@ -27,6 +27,11 @@
 @import url('../components/header/__menu-button/header__menu-button.css');
 @import url('../components/header/__motto/header__motto.css');
 
+@import url('../components/header/__popup/header__popup.css');
+@import url('../components/header/__popup-menu/header__popup-menu.css');
+@import url('../components/header/__popup-link/header__popup-link.css');
+
+
 @import url('../components/welcome/welcome.css');
 @import url('../components/quote/quote.css');
 

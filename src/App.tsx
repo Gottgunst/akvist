@@ -78,7 +78,10 @@ function App() {
     <BranchContext.Provider value={{targetBranch, setTargetBranch}}>
       <BrowserRouter>
 
-        <Header branches={baseBranches}/>
+        <Header
+          branches={baseBranches}
+          baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})}
+        />
 
         <main>
           <section className='welcome'>
@@ -152,7 +155,7 @@ function App() {
             <Route path='*' element={<Navigate to='/' replace />} />
           </Routes>
 
-          <section className='section section_type_contacts'>
+          <section className='section section_type_contacts' id='Contacts'>
 
             {baseBranches.map((branch, index) =>
               branch.city===targetBranch &&
