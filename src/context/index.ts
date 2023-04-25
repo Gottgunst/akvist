@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 interface IContext {
-  targetBranch: any
+  targetBranch?: any
   setTargetBranch?: any
 }
 

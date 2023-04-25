@@ -75,6 +75,9 @@
 @import url('../components/branch/__iframe/branch__iframe.css');
 
 @import url('../components/footer/footer.css');
+@import url('../components/footer/__branch/footer__branch.css');
+@import url('../components/footer/__label/footer__label.css');
+@import url('../components/footer/__phone/footer__phone.css');
 
 @import url('../components/site-map/site-map.css');
 @import url('../components/site-map/__block/site-map__block.css');
@@ -83,5 +86,7 @@
 @import url('../components/site-map/__link/site-map__link.css');
 
 @import url('../components/law-data/law-data.css');
+@import url('../components/law-data/__logo/law-data__logo.css');
 @import url('../components/law-data/__copyright/law-data__copyright.css');
 @import url('../components/law-data/__politics/law-data__politics.css');
+@import url('../components/law-data/__link/law-data__link.css');

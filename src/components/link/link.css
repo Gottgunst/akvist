@@ -4,11 +4,15 @@
   transition: var(--transition__link);
 }
 
-.link:hover,
-.link:focus {
+.link:hover {
   opacity: .6;
 }
 
-.link:visited {
+/* .link:visited {
   color: inherit;
+} */
+
+.active {
+  opacity: .2;
+  pointer-events: none;
 }
