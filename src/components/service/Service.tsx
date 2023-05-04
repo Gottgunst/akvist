@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+
+
 export function Service() {
+
+  useEffect(() => {
+    document.querySelector('header')?.classList.remove('header_inverted');
+  },[]);
+
   return (
     <section className="section">
       <h2 className="section__title">Сервис</h2>

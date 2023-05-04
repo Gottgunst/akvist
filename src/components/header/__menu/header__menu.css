@@ -8,7 +8,7 @@
   font-size: var(--font-size__p);
   line-height: var(--line-height__p);
   font-weight: var(--font-weight__medium);
-  color: var(--color__text_invert);
+  color: inherit;
 }
 
 

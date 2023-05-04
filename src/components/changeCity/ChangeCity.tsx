@@ -9,11 +9,11 @@ export function ChangeCity({target}:IChangeCityProps) {
 
   const {targetBranch, setTargetBranch} = useContext(BranchContext);
 
-  // useState( () => {
+  useEffect(() => {
 
     setTargetBranch(target);
 
-  // }, [])
+  },[setTargetBranch, target]);
 
 
   return (

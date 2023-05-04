@@ -106,7 +106,10 @@ function App() {
                </>}>
             </Route>
 
-            <Route path='/service'
+            <Route path='/:city?/service'
+                loader={({ params }) => {
+                console.log(params["city"]);}}
+              action={({ params }) => {console.log(params);}}
               element={<Service />}>
             </Route>
 
@@ -119,7 +122,7 @@ function App() {
                   {return el.city===targetBranch})}
                   baseBrands={baseBrands}/>
                 </>}>
-              <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
+              {/* <Route path='*' element={<Navigate to='/Krasnodar' replace />} /> */}
             </Route>
 
 
@@ -154,15 +157,15 @@ function App() {
 
 
             {/* -------- alias -------- */}
-            <Route path='/Rostov-na-Donu' element={ <Navigate to='/' replace />} />
+            {/* <Route path='/Rostov-na-Donu' element={ <Navigate to='/' replace />} />
             <Route path='/Rostov' element={<Navigate to='/' replace />} />
 
             <Route path='/Pitigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
             <Route path='/Partygorsk' element={<Navigate to='/Pyatigorsk' replace />} />
             <Route path='/Patigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
-            <Route path='/Piatigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+            <Route path='/Piatigorsk' element={<Navigate to='/Pyatigorsk' replace />} /> */}
 
-            <Route path='*' element={<Navigate to='/' replace />} />
+            {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
           </Routes>
 
           <section className='section section_type_contacts' id='Contacts'>
