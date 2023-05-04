@@ -1,20 +1,20 @@
 .direction__description {
   margin: 12px 0 52px;
 
-  font-size: var(--font-size__p);
+  /* font-size: var(--font-size__p);
   line-height: var(--line-height__p);
   font-weight: var(--font-weight__regular);
-  color: var(--color__text_p);
+  color: var(--color__text_p); */
 
   max-height: calc(100% - 166px);
   box-sizing: border-box;
 
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 /* --------------MEDIA--------------- */

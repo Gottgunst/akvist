@@ -3,6 +3,6 @@
   border: 0;
   width: 100%;
   min-height: 336px;
-  background: var(--color__accent_orange) center / cover no-repeat;
+  background: var(--color__accent_green) center / cover no-repeat;
   cursor: pointer;
 }

@@ -1,10 +1,9 @@
-.header__motto {
+.cover__motto {
   width: 532px;
   min-height: 124px;
   padding: 28px 40px 44px;
   box-sizing: border-box;
   z-index: 10;
-  grid-area: motto;
 
   background-color: var(--color__accent_green);
   border-radius: var(--border-radius__main);
@@ -20,13 +19,13 @@
 /* --------------MEDIA--------------- */
 
 @media screen and (max-width: 1079px) {
-  .header__motto {
+  .cover__motto {
     max-width: 480px;
   }
 }
 
 @media screen and (max-width: 791px) {
-  .header__motto {
+  .cover__motto {
     min-width: 295px;
     max-width: 80vw;
     padding: 16px 24px 24px;

@@ -3,6 +3,11 @@ import { Quote } from './components/quote/Quote'
 import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
+
+
+import { Cover } from './components/cover/Cover'
+import { Service } from './components/service/Service'
+
 import { PageDirections } from './pages/PageDirections'
 
 import './pages/index.css';
@@ -10,6 +15,7 @@ import './pages/index.css';
 import { useState } from 'react';
 import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
 import { useData } from './hooks/data'
+import { ChangeCity } from './components/changeCity/ChangeCity'
 import { IBranch, IBrand, IContact, IDirection } from './models';
 
 import { preBranch } from './data/branch';
@@ -48,24 +54,24 @@ function App() {
   const baseContacts = responseContacts.loading ? preContacts : responseContacts.data as IContact[];
 
 
+  // проверяем адрес на наличие филиала → переводим в строчные → устанавливаем состояние
+
   const [targetBranch, setTargetBranch] = useState(()=> {
     const location = window.location.pathname.split('/');
-    switch (location[1]) {
-      case 'Krasnodar':
+    switch (location[1].toLowerCase()) {
+      case 'krasnodar':
         return 'Краснодар';
 
-      case 'Stavropol':
+      case 'stavropol':
         return 'Ставрополь';
 
-      case 'Pyatigorsk':
+      case 'pyatigorsk':
         return 'Пятигорск';
 
       default:
         return 'Ростов-на-Дону'
-
     }
   });
-
 
   return (
     <>
@@ -75,42 +81,94 @@ function App() {
     <BranchContext.Provider value={{targetBranch, setTargetBranch}}>
       <BrowserRouter>
 
-        <Header branches={baseBranches}/>
+
+
+
+
+
+        <Header
+          branches={baseBranches}
+          baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})}
+        />
 
         <main>
-          <section className='welcome'>
 
-            <Quote />
 
-          </section>
 
           <Routes>
             <Route path='/'
-            element={<PageDirections baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})} baseBrands={baseBrands}/>}>
-
-              <Route path='Rostov-na-Donu' element={<Navigate to='/' replace />} />
-              <Route path='Rostov' element={<Navigate to='/' replace />} />
-
-              <Route path='Krasnodar'>
-                <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
-              </Route>
-              <Route path='Stavropol'>
-               <Route path='*' element={<Navigate to='/Stavropol' replace />} />
-              </Route>
-
-              <Route path='Pyatigorsk'>
-                <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
-              </Route>
-              <Route path='Pitigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
-              <Route path='Patigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
-              <Route path='Piatigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
-
-              <Route path='*' element={<Navigate to='/' replace />} />
-
+              element={<>
+                <ChangeCity target='Ростов-на-Дону' />
+                <PageDirections
+                  baseDirections={baseDirections.filter(el=>
+                  {return el.city===targetBranch})}
+                  baseBrands={baseBrands}/>
+               </>}>
             </Route>
+
+            <Route path='/:city?/service'
+                loader={({ params }) => {
+                console.log(params["city"]);}}
+              action={({ params }) => {console.log(params);}}
+              element={<Service />}>
+            </Route>
+
+
+            <Route path='/Krasnodar'
+              element={<>
+                  <ChangeCity target='Краснодар' />
+                  <PageDirections
+                  baseDirections={baseDirections.filter(el=>
+                  {return el.city===targetBranch})}
+                  baseBrands={baseBrands}/>
+                </>}>
+              {/* <Route path='*' element={<Navigate to='/Krasnodar' replace />} /> */}
+            </Route>
+
+
+
+
+            <Route path='/Stavropol'
+              element={<>
+                <ChangeCity target='Ставрополь' />
+                <PageDirections
+                baseDirections={baseDirections.filter(el=>
+                {return el.city===targetBranch})}
+                baseBrands={baseBrands}/>
+              </>}>
+
+
+              <Route path='*' element={<Navigate to='/Stavropol' replace />} />
+            </Route>
+
+            <Route path='/Pyatigorsk'
+              element={<>
+                <ChangeCity target='Пятигорск' />
+                <PageDirections
+                baseDirections={baseDirections.filter(el=>
+                {return el.city===targetBranch})}
+                baseBrands={baseBrands}/>
+              </>}>
+
+
+              <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
+            </Route>
+
+
+
+            {/* -------- alias -------- */}
+            {/* <Route path='/Rostov-na-Donu' element={ <Navigate to='/' replace />} />
+            <Route path='/Rostov' element={<Navigate to='/' replace />} />
+
+            <Route path='/Pitigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+            <Route path='/Partygorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+            <Route path='/Patigorsk' element={<Navigate to='/Pyatigorsk' replace />} />
+            <Route path='/Piatigorsk' element={<Navigate to='/Pyatigorsk' replace />} /> */}
+
+            {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
           </Routes>
 
-          <section className='section section_type_contacts'>
+          <section className='section section_type_contacts' id='Contacts'>
 
             {baseBranches.map((branch, index) =>
               branch.city===targetBranch &&

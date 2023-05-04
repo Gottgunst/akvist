@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  flex-shrink: 0;
 }
 
 .direction_column .direction__texts {
@@ -14,6 +15,10 @@
 /* --------------MEDIA--------------- */
 
 @media screen and (max-width: 1079px) {
+  .direction__texts {
+    flex-basis: 300px;
+  }
+
   .direction_column .direction__texts {
     padding: 20px 0 0;
   }
