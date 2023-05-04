@@ -5,6 +5,9 @@ import { Footer } from './components/footer/Footer'
 
 
 
+import { Cover } from './components/cover/Cover'
+import { Service } from './components/service/Service'
+
 import { PageDirections } from './pages/PageDirections'
 
 import './pages/index.css';
@@ -78,17 +81,19 @@ function App() {
     <BranchContext.Provider value={{targetBranch, setTargetBranch}}>
       <BrowserRouter>
 
+
+
+
+
+
         <Header
           branches={baseBranches}
           baseDirections={baseDirections.filter(el=> {return el.city===targetBranch})}
         />
 
         <main>
-          <section className='welcome'>
 
-            <Quote />
 
-          </section>
 
           <Routes>
             <Route path='/'
@@ -100,6 +105,11 @@ function App() {
                   baseBrands={baseBrands}/>
                </>}>
             </Route>
+
+            <Route path='/service'
+              element={<Service />}>
+            </Route>
+
 
             <Route path='/Krasnodar'
               element={<>
