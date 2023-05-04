@@ -34,7 +34,7 @@ export function Direction({direction, baseBrands}: IDirectProps) {
       </div>
 
       <div className='direction__texts'>
-        <h2 className='direction__header'>{direction.title}</h2>
+        <h2 className='section__title section__title_type_article'>{direction.title}</h2>
 
         { !direction.combine &&
           <ul className='direction__brands-name'>
@@ -46,7 +46,7 @@ export function Direction({direction, baseBrands}: IDirectProps) {
           </ul>
         }
 
-        <p className='direction__description'>{direction.description}</p>
+        <p className='section__text direction__description'>{direction.description}</p>
         <button type='button' className='button direction__button'>{direction.buttonText}</button>
       </div>
 
