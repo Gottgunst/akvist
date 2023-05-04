@@ -17,6 +17,7 @@
 @media screen and (max-width: 1079px) {
   .direction__images {
     flex-basis: auto;
+    flex-grow: 1;
   }
 
   .direction_column .direction__images {
