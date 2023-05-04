@@ -3,6 +3,7 @@ import { Brands } from '../components/brands/Brands';
 
 import { IBrand, IDirection } from '../models';
 import { Outlet } from 'react-router-dom';
+import { Cover } from '../components/cover/Cover';
 
 interface IPageDirectionsProps {
   baseDirections: IDirection[]
@@ -49,6 +50,7 @@ export function PageDirections({ baseDirections, baseBrands}:IPageDirectionsProp
     <>
       <Outlet></Outlet>
 
+      <Cover />
       <section className='section section_type_directions'>
 
         {firstPart}
