@@ -1,5 +1,5 @@
 .header__link {
-  color: var(--color__text_invert);
+  color: inherit;
 }
 
 .header__link:hover {

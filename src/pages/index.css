@@ -23,6 +23,8 @@
 
 
 @import url('../components/header/header.css');
+@import url('../components/header/_inverted/header_inverted.css');
+
 @import url('../components/header/__wrapper/header__wrapper.css');
 @import url('../components/header/__logo/header__logo.css');
 @import url('../components/header/__nav/header__nav.css');
