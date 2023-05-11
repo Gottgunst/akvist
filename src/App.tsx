@@ -1,11 +1,11 @@
 import { Header } from './components/header/Header'
-import { Quote } from './components/quote/Quote'
+// import { Quote } from './components/quote/Quote'
 import { Contacts } from './components/contacts/Contacts'
 import { Footer } from './components/footer/Footer'
 
 
 
-import { Cover } from './components/cover/Cover'
+// import { Cover } from './components/cover/Cover'
 import { Service } from './components/service/Service'
 
 import { PageDirections } from './pages/PageDirections'
@@ -13,7 +13,7 @@ import { PageDirections } from './pages/PageDirections'
 import './pages/index.css';
 
 import { useState } from 'react';
-import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, Navigate, BrowserRouter, RouterProvider, createBrowserRouter, useLoaderData } from 'react-router-dom'
 import { useData } from './hooks/data'
 import { ChangeCity } from './components/changeCity/ChangeCity'
 import { IBranch, IBrand, IContact, IDirection } from './models';
@@ -73,6 +73,8 @@ function App() {
     }
   });
 
+
+
   return (
     <>
     {responseDirections.loading===false && console.log('=Loading Done=')}
@@ -96,7 +98,9 @@ function App() {
 
 
           <Routes>
-            <Route path='/'
+          <Route path='/:city?/'>
+
+            <Route path=''
               element={<>
                 <ChangeCity target='Ростов-на-Дону' />
                 <PageDirections
@@ -104,16 +108,16 @@ function App() {
                   {return el.city===targetBranch})}
                   baseBrands={baseBrands}/>
                </>}>
-            </Route>
 
-            <Route path='/:city?/service'
-                loader={({ params }) => {
-                console.log(params["city"]);}}
-              action={({ params }) => {console.log(params);}}
+            </Route>
+            <Route path='service'
               element={<Service />}>
             </Route>
 
+          </Route>
 
+
+{/*
             <Route path='/Krasnodar'
               element={<>
                   <ChangeCity target='Краснодар' />
@@ -122,7 +126,7 @@ function App() {
                   {return el.city===targetBranch})}
                   baseBrands={baseBrands}/>
                 </>}>
-              {/* <Route path='*' element={<Navigate to='/Krasnodar' replace />} /> */}
+               <Route path='*' element={<Navigate to='/Krasnodar' replace />} />
             </Route>
 
 
@@ -153,6 +157,8 @@ function App() {
 
               <Route path='*' element={<Navigate to='/Pyatigorsk' replace />} />
             </Route>
+
+            */}
 
 
 

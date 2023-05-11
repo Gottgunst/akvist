@@ -57,7 +57,7 @@ export function Header({branches, baseDirections}:IHeaderProps) {
               </nav>
             </li>
             <li>
-              <NavLink to='/service' className='link'>
+              <NavLink to='service' className='link'>
                 Сервис
               </NavLink></li>
             <li>Интернет-магазин</li>
